@@ -9,3 +9,12 @@ fill: none;
 	width: 24px;
 	height: 24px;
 }
+
+
+.c-icon-list{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}.c-icon-list__item + .c-icon-list__item{
+	 margin-top: 20px;
+}
