@@ -1,0 +1,72 @@
+.c-btn {
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	border-radius: 25px;
+	max-width: 100%;
+	width: 100%;
+	border: 0;
+	outline: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	transition: text-shadow .2s ease, box-shadow .2s ease;
+}
+
+.c-btn_style-default {
+	background-color: #FFFFFF;
+	color: #7C7C7C;
+
+	&:hover, &:focus {
+		background-color: #F2F2F2;
+	}
+}
+
+.c-btn_style-default.c-btn_color-primary {
+	background-color: #82A4E8;
+	color: #FFFFFF;
+
+	&:hover, &:focus {
+		background-color: #6C95E8;
+	}
+}
+
+.c-btn_style-default.c-btn_color-primary-dark {
+	background-color: #21458C;
+	color: #FFFFFF;
+}
+
+.c-btn_style-default.c-btn_color-light {
+	background-color: #F2F2F2;
+	color: #7C7C7C;
+
+	&:hover, &:focus {
+		background-color: #7C7C7C;
+		color: #FFFFFF;
+	}
+}
+
+.c-btn_sm {
+	height: 46px;
+	font-size: 14px;
+	line-height: 17px;
+	border-radius: 6px;
+}
+
+.c-btn_md {
+	height: 48px;
+	font-size: 16px;
+	line-height: 20px;
+	border-radius: 4px;
+}
+
+.c-btn_lg {
+	height: 60px;
+	font-size: 16px;
+	line-height: 20px;
+	border-radius: 4px;
+}
