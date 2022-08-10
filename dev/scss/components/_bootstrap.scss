@@ -1,13 +1,22 @@
+$padding-container: 10px;
 .row{
-	margin-right: -15px;
-	margin-left: -15px;
+	margin-right: -$padding-container;
+	margin-left: -$padding-container;
 
 	& > * {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: $padding-container;
+		padding-right: $padding-container;
 	}
 }
+.row.u-reset-indent{
+	margin-right: 0;
+	margin-left: 0;
 
+	& > * {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 .ratio-1x1::before {
 	padding-top: 100%
 }
@@ -33,10 +42,9 @@
 	white-space: nowrap !important;
 	border: 0 !important
 }
-$padding-container: 15px;
 .container {
 	padding: 0 $padding-container  0 $padding-container;
-	max-width: 1218px + ($padding-container * 2);
+	max-width: 1722px + ($padding-container * 2);
 	//max-width: 320px + $padding-container - (32px - $padding-container) * 2;
 }
 
@@ -61,7 +69,7 @@ $padding-container: 15px;
 @media (min-width: $bp-xl)  {
 	.container {
 		padding: 0 $padding-container  0 $padding-container;
-		max-width: 1218px + ($padding-container * 2);
+		max-width: 1722px + ($padding-container * 2);
 	}
 }
 
