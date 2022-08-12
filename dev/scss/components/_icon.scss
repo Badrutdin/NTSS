@@ -1,16 +1,18 @@
-.c-icon .c-icon_default{
-fill: none;
+.c-icon .c-icon_default {
+  fill: none;
 }
 
-.c-icon_primary{
+.c-icon_primary {
 
 }
 
 
-.c-icon-list{
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}.c-icon-list__item + .c-icon-list__item{
-	 margin-top: 20px;
+.c-icon-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.c-icon-list__item + .c-icon-list__item {
+  margin-top: 20px;
 }

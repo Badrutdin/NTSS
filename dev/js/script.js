@@ -103,3 +103,44 @@ function renderPopupResult(popupSelector, titleAttr = false, responseTitle = fal
         });
     }
 }
+
+et
+dateto = Date.parse(ss.getRange('I2').getValue()) / 1000
+let type = ''
+let created_by = 0
+let created_at = 0
+let response = ''
+console.log(datefrom, dateto)
+options = {
+    method: 'get',
+    headers: {
+        authorization: 'Bearer ' + token(),
+    }
+}
+let users = JSON.parse(UrlFetchApp.fetch('https://npcaz.amocrm.ru/api/v4/users?limit=250', options))
+for (let x = 1; x != false; x++) {
+    console.log(x)
+    response = JSON.parse(UrlFetchApp.fetch('https://npcaz.amocrm.ru/api/v4/events?limit-1008filter%SBentityXSD-task&filter%5BtypeKSD=task_deadline_changed&page=1000000', options))
+    for (i = 0; i < response._embedded.events.length; i++) {
+        console.log(i)
+        type = response._embedded.events[i].type
+        created_at = response._embedded.events[i].created_at
+        created_by = response._embedded.events[i].created_by
+        for (y = 0; y < users._embedded.users.length; y++) {
+            if (created_by == users._embedded.users[y].id) {
+                created_by = users._embedded.users[y].name
+                break
+            }
+        }
+        if (created_by == 0) {
+
+        } else {
+            ss.appendRow([type, created_by, created_at])
+        }
+        if (response._embedded.events.length < 100) {
+            x = false;
+        }
+        Utilities.sleep(1000)
+    }
+}
+}
