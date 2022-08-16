@@ -1,55 +1,96 @@
 .c-input {
-	border-radius: 0;
-	box-shadow: none;
-	outline: none;
-	border: none;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  width: 100%;
 }
 
 .c-input_style-default {
-	border-width: 1px;
-	border-style: solid;
+  border-width: 1px;
+  border-style: solid;
 }
+
 .c-input_style-secondary {
-	text-align: center;
+  text-align: center;
 }
 
 .c-input_style-default.c-input_color-primary {
-	background-color: #FFFFFF;
-	border-color: #F2F2F2;
-	color: #000000;
-	&::placeholder{
-		color: #7C7C7C;
-	}
-	&:hover, &:focus {
-		border-color: #7C7C7C;
-		&::placeholder{
-			color: #555555;
-		}
-	}
+  background-color: #FFFFFF;
+  border-color: #F2F2F2;
+  color: #000000;
 
-	&:not(:placeholder-shown) {
-		border-color: #21458C;
-	}
+  &::placeholder {
+    color: #7C7C7C;
+  }
 
-	&:not(:placeholder-shown):hover,&:not(:placeholder-shown):focus {
-		border-color: #82A4E8;
-	}
+  &:hover, &:focus {
+    border-color: #7C7C7C;
+
+    &::placeholder {
+      color: #555555;
+    }
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: #21458C;
+  }
+
+  &:not(:placeholder-shown):hover, &:not(:placeholder-shown):focus {
+    border-color: #82A4E8;
+  }
 }
+
 .c-input_style-secondary.c-input_color-primary {
-	background-color: #F2F2F2;
+  background-color: #F2F2F2;
 }
+
 .c-input_md {
-	padding: 14px 20px;
-	font-size: 16px;
-	line-height: 20px;
-	height: 48px;
-	border-radius: 4px;
+  padding: 14px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  height: 48px;
+  border-radius: 4px;
 }
 
 .c-input_lg {
-	padding: 22px 30px;
-	font-size: 14px;
-	line-height: 17px;
-	height: 60px;
-	border-radius: 6px;
+  padding: 22px 30px;
+  font-size: 14px;
+  line-height: 17px;
+  height: 60px;
+  border-radius: 6px;
+}
+
+
+.c-input-wrap {
+  position: relative;
+
+  &__label {
+    pointer-events: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    transition: transform .05s ease-out;
+  }
+
+  &_md {
+    .c-input-wrap__label {
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &_lg {
+    .c-input-wrap__label {
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+&_changed{
+  & .c-input-wrap__label{
+    transform: translateY(-150%);
+  }
+}
+
 }

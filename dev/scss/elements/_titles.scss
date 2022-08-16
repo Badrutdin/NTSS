@@ -1,0 +1,19 @@
+.c-title {
+  font-weight: 500;
+  line-height: 1.2;
+  &_xs {
+    font-size: 20px;
+  }
+
+  &_sm {
+    font-size: 24px;
+  }
+
+  &_md {
+    font-size: 28px;
+  }
+
+  &_lg {
+    font-size: 36px;
+  }
+}

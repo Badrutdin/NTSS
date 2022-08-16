@@ -9,35 +9,43 @@ if (!Object.entries)
         return resArray;
     };
 
-function dropdown($dropdown) {
-    const parent = $dropdown.get(0);
-    const title = parent.querySelector('.c-dropdown__title');
-    const icon = parent.querySelector('.c-dropdown__icon');
-    const closedHeight = title.offsetHeight + 'px';
-    const openedHeight = parent.offsetHeight + 'px';
-    if ($(parent).attr('data-is-open') === 'closed') {
-        parent.style.maxHeight = closedHeight;
+
+function acc($target) {
+    let i;
+
+    for (i = 0; i < $target.length; i++) {
+        $($target[i]).on("click", function () {
+            $(this).toggleClass("active");
+            const panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
     }
-    $(title).on('click', function () {
-        if ($(parent).attr('data-is-open') === 'closed') {
-            parent.style.maxHeight = openedHeight;
-            $(parent).attr('data-is-open', 'opened')
-            $(icon).addClass('c-dropdown__icon_opened')
-        } else if ($(parent).attr('data-is-open') === 'opened') {
-            parent.style.maxHeight = closedHeight;
-            $(icon).removeClass('c-dropdown__icon_opened')
-            $(parent).attr('data-is-open', 'closed')
-        }
-    })
 }
 
 $(document).ready(function () {
-    const $dropdown = $('.c-dropdown');
-    if ($dropdown.length) {
-        $.each($dropdown, function () {
-            dropdown($(this))
-        })
+    acc($('.accordion'));
+
+    function customLabelHandler(inputSelector) {
+        $(document).on('focus',
+            inputSelector, function () {
+                $(this).closest('.c-input-wrap').addClass('c-input-wrap_changed')
+            }
+        )
+        $(document).on('focusout',
+            inputSelector, function () {
+                let val = $(this).val()
+                if (!val || val.trim() == '' || val == null) {
+                    $(this).closest('.c-input-wrap').removeClass('c-input-wrap_changed')
+                }
+            }
+        )
     }
+
+    customLabelHandler('.c-input-wrap__input')
     const phoneMaskOptions = {
         translation: {
             r: {
@@ -54,7 +62,7 @@ $(document).ready(function () {
     $('input[type=tel]').mask('r0 (000) 000-00-00', phoneMaskOptions);
 
     // ratio
-    $('.ratio').on('click', function () {
+    $('[data-video-frame]').on('click', function () {
         var url = $(this).find('.iframe-preload').attr("data-url");
         var iframe = document.createElement('iframe');
         iframe.src = url;
@@ -102,45 +110,4 @@ function renderPopupResult(popupSelector, titleAttr = false, responseTitle = fal
             }
         });
     }
-}
-
-et
-dateto = Date.parse(ss.getRange('I2').getValue()) / 1000
-let type = ''
-let created_by = 0
-let created_at = 0
-let response = ''
-console.log(datefrom, dateto)
-options = {
-    method: 'get',
-    headers: {
-        authorization: 'Bearer ' + token(),
-    }
-}
-let users = JSON.parse(UrlFetchApp.fetch('https://npcaz.amocrm.ru/api/v4/users?limit=250', options))
-for (let x = 1; x != false; x++) {
-    console.log(x)
-    response = JSON.parse(UrlFetchApp.fetch('https://npcaz.amocrm.ru/api/v4/events?limit-1008filter%SBentityXSD-task&filter%5BtypeKSD=task_deadline_changed&page=1000000', options))
-    for (i = 0; i < response._embedded.events.length; i++) {
-        console.log(i)
-        type = response._embedded.events[i].type
-        created_at = response._embedded.events[i].created_at
-        created_by = response._embedded.events[i].created_by
-        for (y = 0; y < users._embedded.users.length; y++) {
-            if (created_by == users._embedded.users[y].id) {
-                created_by = users._embedded.users[y].name
-                break
-            }
-        }
-        if (created_by == 0) {
-
-        } else {
-            ss.appendRow([type, created_by, created_at])
-        }
-        if (response._embedded.events.length < 100) {
-            x = false;
-        }
-        Utilities.sleep(1000)
-    }
-}
 }

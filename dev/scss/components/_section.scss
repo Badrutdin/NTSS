@@ -1,0 +1,17 @@
+.c-section {
+  &_sm {
+  }
+
+  &_md {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &_lg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    & .c-section__header{
+      margin-bottom: 40px;
+    }
+  }
+}
