@@ -134,13 +134,16 @@ body {
 
 .c-simple-product-card {
   height: 100%;
+
   &_events {
     transition: transform, box-shadow, .1s ease-in;
+
     &:hover, &:focus {
       transform: scale(.9);
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
   }
+
   &__title {
     font-weight: 500;
     font-size: 16px;
@@ -249,6 +252,7 @@ body {
     justify-content: center;
     flex-shrink: 0;
     position: relative;
+
     &:hover, &:focus {
       transform: scale(1.2);
     }
@@ -526,52 +530,71 @@ body {
   }
 }
 
-.c-slider .owl-nav{
-  position: absolute;
-  top: 50%;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  transform: translateY(-50%);
+.c-slider {
+
+  & .owl-nav {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    transform: translateY(-50%);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+  &_w-auto{
+    .owl-item img {
+      width: auto;
+    }
+  }
+&_h-100{
+  .c-slider__item{
+    height: 100%;
+  }
 }
-.c-slider__item{
-  display: flex;
-  justify-content: center;
+  & .owl-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }
 
-.c-slider .owl-item img{
-  width: auto;
-}
-
-.u-bg-tertiary{
-  background-color: #21458C;
-}
-
-.c-slider .owl-stage{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.c-link{
-  text-decoration: none;
-  display: block;
-  color: inherit;
-}
-
-.owl-nav > button{
+.owl-nav > button {
   background-color: transparent;
 }
-.slider-wrap{
-  &__slider-controls{
+
+.slider-wrap {
+  &__slider-controls {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-.slide-desc{
+
+.c-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.slide-desc {
   color: white;
   text-align: center;
   font-size: 26px;
+}
+
+.u-bg-tertiary {
+  background-color: #21458C;
+}
+
+.c-main-banner{
+  height: 534px;
+  & .owl-item{
+    height: 534px;
+  }
 }
