@@ -95,8 +95,18 @@ body {
   background-color: #FFFFFF;
   border: 1px solid #F2F2F2;
   padding: 10px 10px 20px;
+  display: block;
+  text-decoration: none;
+  transition: transform, box-shadow, .1s ease-in;
 
-  &__prev {
+  &_events {
+    &:hover, &:focus {
+      transform: scale(1.1);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+
+  &__preview {
     height: 238px;
     max-height: 100%;
     background-position: center;
@@ -124,7 +134,13 @@ body {
 
 .c-simple-product-card {
   height: 100%;
-
+  &_events {
+    transition: transform, box-shadow, .1s ease-in;
+    &:hover, &:focus {
+      transform: scale(.9);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
   &__title {
     font-weight: 500;
     font-size: 16px;
@@ -157,12 +173,28 @@ body {
   background-color: #FFFFFF;
   padding: 20px;
   border-radius: 2px;
+  text-decoration: none;
+  display: block;
+  color: #7C7C7C;
+  transition: background-color, box-shadow, color, .2s;
+
+  &_events {
+    &:hover, &:focus {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      background-color: #82A4E8;
+      color: #FFFFFF;
+
+      .c-news-card__preview {
+        background-size: 110%;
+      }
+    }
+  }
 
   &__title {
     margin-bottom: 40px;
     font-size: 18px;
     line-height: 1.2;
-    color: #7C7C7C;
+    color: inherit;
     height: 2.4em;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
@@ -172,16 +204,17 @@ body {
   &__date {
     font-size: 14px;
     line-height: 1.2;
-    color: #7C7C7C;
+    color: inherit;
   }
 
-  &__prev {
+  &__preview {
     height: 220px;
     max-height: 100%;
     margin-bottom: 20px;
     background-position: center;
-    background-size: contain;
+    background-size: 100%;
     background-repeat: no-repeat;
+    transition: background .4s ease-in-out;
   }
 
 }
@@ -190,6 +223,13 @@ body {
   border-radius: 6px;
   background-color: #FFFFFF;
   position: relative;
+  transition: box-shadow, .2s ease-in;;
+
+  &_events {
+    &:hover, &:focus {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
 
   &__body {
     overflow: hidden;
@@ -200,7 +240,7 @@ body {
     position: absolute;
   }
 
-  &__prev {
+  &__preview {
     padding: 10px;
     max-height: 100%;
     flex-basis: 218px;
@@ -208,6 +248,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    position: relative;
+    &:hover, &:focus {
+      transform: scale(1.2);
+    }
   }
 
   &_sm {
@@ -218,7 +262,7 @@ body {
       right: 10px;
     }
 
-    .c-product-card__prev {
+    .c-product-card__preview {
       margin-bottom: 10px;
       height: 190px;
     }
@@ -236,7 +280,7 @@ body {
       right: 10px;
     }
 
-    .c-product-card__prev {
+    .c-product-card__preview {
       margin-bottom: 20px;
       height: 218px;
     }
@@ -268,7 +312,7 @@ body {
       margin-bottom: 20px;
     }
 
-    .c-product-card__prev {
+    .c-product-card__preview {
       height: 156px;
       margin-bottom: 0;
     }
@@ -286,6 +330,8 @@ body {
 
 .c-product-desc {
   &__text {
+    text-decoration: none;
+    display: block;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.2;
@@ -294,6 +340,10 @@ body {
     -webkit-line-clamp: 2;
     overflow: hidden;
     color: #555555;
+
+    &:hover, &:focus {
+      color: #82A4E8;
+    }
   }
 
   &__articul {
@@ -355,7 +405,8 @@ body {
   display: flex;
   margin-right: -6px;
   margin-left: -6px;
-  &__item{
+
+  &__item {
     padding-left: 6px;
     padding-right: 6px;
   }
@@ -414,7 +465,7 @@ body {
   font-size: 15px;
 }
 
-.active, .accordion:hover {
+.accordion.active, .accordion:hover {
   background-color: #82A4E8;
   color: #FFFFFF;
 }
@@ -473,4 +524,54 @@ body {
     left: 10px;
     transform: translateY(-50%);
   }
+}
+
+.c-slider .owl-nav{
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  transform: translateY(-50%);
+}
+.c-slider__item{
+  display: flex;
+  justify-content: center;
+}
+
+.c-slider .owl-item img{
+  width: auto;
+}
+
+.u-bg-tertiary{
+  background-color: #21458C;
+}
+
+.c-slider .owl-stage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-link{
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.owl-nav > button{
+  background-color: transparent;
+}
+.slider-wrap{
+  &__slider-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.slide-desc{
+  color: white;
+  text-align: center;
+  font-size: 26px;
 }
