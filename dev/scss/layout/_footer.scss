@@ -1,0 +1,21 @@
+.c-bottom-menu__item + .c-bottom-menu__item{
+  margin-top: 10px;
+}
+.c-bottom-menu__item:first-child{
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.c-footer__logo{
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.c-bottom-menu__link{
+  &:hover,&:focus{
+    color: #82A4E8;
+  }
+}
+.c-footer{
+  padding-top: 16px;
+  padding-bottom: 35px;
+}

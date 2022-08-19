@@ -252,10 +252,6 @@ body {
     justify-content: center;
     flex-shrink: 0;
     position: relative;
-
-    &:hover, &:focus {
-      transform: scale(1.2);
-    }
   }
 
   &_sm {

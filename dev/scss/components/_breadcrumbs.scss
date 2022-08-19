@@ -1,0 +1,30 @@
+.c-breadcrumbs {
+  margin-bottom: 50px;
+}
+
+.c-breadcrumbs__item + .c-breadcrumbs__item:before {
+  margin-right: 10px;
+  margin-left: 10px;
+  content: '-';
+}
+
+.c-breadcrumbs__item {
+  display: inline;
+  word-break: break-all;
+}
+
+.c-breadcrumbs__link {
+  text-decoration: none;
+  color: inherit;
+  transition: text-shadow .2s ease;
+
+  &:hover, &:focus {
+    color: #82A4E8;
+  }
+
+}
+
+.c-breadcrumbs__item:last-child {
+  pointer-events: none;
+  cursor: default;
+}
