@@ -19,3 +19,17 @@
   padding-top: 16px;
   padding-bottom: 35px;
 }
+
+.c-social{
+  margin-right: -10px;
+  margin-left: -10px;
+  &__item{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: transform .1s ease-in;
+    &:hover,&:focus{
+      transform: scale(1.1);
+    }
+  }
+}

@@ -26,6 +26,17 @@ function acc($target) {
 }
 
 $(document).ready(function () {
+    $(document).mouseup(function(e)
+    {
+        const form = $('[data-search-form]');
+        if (!form.is(e.target) && form.has(e.target).length === 0)
+        {
+            form.addClass('d-none').find('form').get(0).reset();
+        }
+    });
+    $('[data-search-trigger]').on('click', function (){
+        $('[data-search-form]').removeClass('d-none').find('.c-input').focus();
+    })
     const $firstMainPageSlider = $('[data-main-slider="1"]')
     const $secondMainPageSlider = $('[data-main-slider="2"]')
     const $thirdMainPageSlider = $('[data-main-slider="3"]')
@@ -176,3 +187,4 @@ function renderPopupResult(popupSelector, titleAttr = false, responseTitle = fal
         });
     }
 }
+

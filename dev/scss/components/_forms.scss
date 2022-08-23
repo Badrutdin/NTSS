@@ -1,0 +1,22 @@
+.c-subscribe-form{
+  display: flex;
+  align-items: center;
+  padding-right: 104px;
+  padding-left: 104px;
+  &__title{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-right: 50px;
+  }
+
+  &__input{
+    margin-right: 20px;
+  }
+  &__submit{
+    width: 270px;
+    flex-shrink: 0;
+  }
+}
