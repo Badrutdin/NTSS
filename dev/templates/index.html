@@ -38,7 +38,7 @@
 
                 <ul class="c-header-icon-list">
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" data-search-trigger title="поиск">
+                        <button type="button" class="c-header-icon-list__btn c-btn" data-search-trigger title="поиск">
                          <span class="c-header-icon-list__icon">
                         <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="m21 21-4.5-4.5L21 21Zm-2-10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0v0Z"
@@ -48,10 +48,10 @@
                         </button>
                         <div class="c-header-search d-none" data-search-form>
                             <div class="c-header-search__inner">
-                                <form action="#" class="c-header-search__form">
+                                <form action="#" class="c-search-form c-search-form_header">
                                     <input class="c-input c-input_style-default c-input_md c-input_color-primary"
                                            placeholder="Введите запрос..." required type="text">
-                                    <button class="c-header-search__submit c-btn" title="поиск">
+                                    <button type="submit" class="c-search-form__submit c-btn" title="поиск">
                          <span>
                         <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="m21 21-4.5-4.5L21 21Zm-2-10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0v0Z"
@@ -65,7 +65,7 @@
                         </div>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="сравнения">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="сравнения">
                     <span class="c-header-icon-list__icon">
                         <svg fill="none" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M17.8 15.6H1.7V.9L1.5.7H.2L0 1v16.2l.2.1h17.6l.2-.1v-1.4l-.2-.1Zm-14-2H5l.2-.1v-3.4L5 10H3.8c-.2 0-.2.1-.2.2v3.4l.1.2Zm3.5 0h1.3l.2-.1V6c0-.1 0-.2-.2-.2H7.3l-.2.2v7.5l.2.2Zm3.6 0h1.3l.2-.1V7.8l-.2-.2h-1.3l-.2.2v5.7c0 .1 0 .2.2.2Zm3.5 0h1.3l.2-.1V4.1s0-.2-.2-.2h-1.3l-.2.2v9.4l.2.2Z"
@@ -78,7 +78,7 @@
                         </button>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="избранное">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="избранное">
                     <span class="c-header-icon-list__icon">
                             <svg fill="none" height="20" width="22" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20.6 4.6a6 6 0 0 0-3.3-3.2 6.2 6.2 0 0 0-6.3 1A6.1 6.1 0 0 0 7 .8a6.2 6.2 0 0 0-5.6 3.7A6 6 0 0 0 .9 7c0 .8.1 1.6.5 2.5l1 2a35 35 0 0 0 7.6 7l.6.5c.2.1.6.1.8 0l.6-.4s2.2-1.4 4.4-3.5c1.3-1.2 2.3-2.4 3.1-3.5.5-.7.9-1.5 1.1-2.1.4-.9.5-1.7.5-2.5a6 6 0 0 0-.5-2.4ZM11 17.1s-8.3-5.3-8.3-10A4.4 4.4 0 0 1 11 5a4.4 4.4 0 0 1 4-2.4c2.4 0 4.3 2 4.3 4.3 0 4.8-8.3 10.1-8.3 10.1Z"
@@ -91,7 +91,7 @@
                         </button>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="корзина">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="корзина">
                     <span class="c-header-icon-list__icon">
 <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path
         d="M21.6 16.5h-14l.8-1.5H20c.4 0 .7-.3.8-.7l1.6-9a.8.8 0 0 0-.8-1H6.8l-.1-.6c0-.4-.4-.7-.8-.7H2.3a.8.8 0 1 0 0 1.7h3l.5 2.6L7 14l-1.7 2.9a.8.8 0 0 0-.1.8c.1.3.4.5.7.5h1.5a2.4 2.4 0 1 0 3.9 0H15a2.4 2.4 0 1 0 3.9 0h2.6a.8.8 0 0 0 .6-1.4.8.8 0 0 0-.6-.2ZM7.2 5.9h13.5l-1.4 7.5H8.7L7.2 5.9Zm2.2 14.4a.7.7 0 0 1 0-1.5.7.7 0 0 1 0 1.5Zm7.7 0a.7.7 0 0 1 0-1.5.7.7 0 0 1 0 1.5Z"
@@ -103,7 +103,7 @@
                         </button>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="выход">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="выход">
                     <span class="c-header-icon-list__icon">
 <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m11 16 5-4-5-4v3H2v2h9v3Z"
                                                                                  fill="#7C7C7C"/><path
@@ -145,7 +145,7 @@
 <div class="container">
     <div class="c-section c-section_lg">
         <div class="c-section__header">
-            <div class="c-title c-title_md text-uppercase text-center">продукты и решения</div>
+            <h2 class="c-title c-title_md text-uppercase text-center">продукты и решения</h2>
         </div>
         <div class="c-section__body">
             <div class="row u-reset-indent">
@@ -205,15 +205,15 @@
             <div class="row">
                 <div class="col-5">
                     <div class="c-title c-title_sm mb-2">Структурированная кабельная система (СКС)</div>
-                    <div class="mb-5">
+                    <p class="mb-5">
                         Это основа информационной структуры любого предприятия. Всё разнообразие информационных сервисов
                         различных типов и назначений, различных периферийных устройств, а так же автоматизированных
                         рабочих
                         мест, СКС позволяет объединить в одну систему. Такие системы как: локальные и телефонные сети,
                         охранно-пожарная сигнализация, система видеонаблюдения, контроль и управление доступом, являются
                         неотъемлемой частью любой современной организации.
-                    </div>
-                    <button class="c-btn c-btn_style-default c-btn_color-primary c-btn_lg c-btn_width-md" type="button">
+                    </p>
+                    <button type="button" class="c-btn c-btn_style-default c-btn_color-primary c-btn_lg c-btn_width-md">
                         Защита проекта
                     </button>
                 </div>
@@ -302,7 +302,7 @@
                                         <div class="c-product-card c-product-card_md c-product-card_events">
                                             <div class="c-product-card__actions c-icon-list">
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="18" width="18"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M17.8 15.6H1.7V.9L1.5.7H.2L0 1v16.2l.2.1h17.6l.2-.1v-1.4l-.2-.1Zm-14-2H5l.2-.1v-3.4L5 10H3.8c-.2 0-.2.1-.2.2v3.4l.1.2Zm3.5 0h1.3l.2-.1V6c0-.1 0-.2-.2-.2H7.3l-.2.2v7.5l.2.2Zm3.6 0h1.3l.2-.1V7.8l-.2-.2h-1.3l-.2.2v5.7c0 .1 0 .2.2.2Zm3.5 0h1.3l.2-.1V4.1s0-.2-.2-.2h-1.3l-.2.2v9.4l.2.2Z"
@@ -311,7 +311,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="20" width="22"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M20.6 4.6a6 6 0 0 0-3.3-3.2 6.2 6.2 0 0 0-6.3 1A6.1 6.1 0 0 0 7 .8a6.2 6.2 0 0 0-5.6 3.7A6 6 0 0 0 .9 7c0 .8.1 1.6.5 2.5l1 2a35 35 0 0 0 7.6 7l.6.5c.2.1.6.1.8 0l.6-.4s2.2-1.4 4.4-3.5c1.3-1.2 2.3-2.4 3.1-3.5.5-.7.9-1.5 1.1-2.1.4-.9.5-1.7.5-2.5a6 6 0 0 0-.5-2.4ZM11 17.1s-8.3-5.3-8.3-10A4.4 4.4 0 0 1 11 5a4.4 4.4 0 0 1 4-2.4c2.4 0 4.3 2 4.3 4.3 0 4.8-8.3 10.1-8.3 10.1Z"
@@ -320,7 +320,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="16" width="22"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M20.3 7c.4.6.4 1.4 0 2-1.5 2-5.1 6-9.3 6-4.2 0-7.8-4-9.3-6a1.7 1.7 0 0 1 0-2C3.2 5 6.8 1 11 1c4.2 0 7.8 4 9.3 6v0Z"
@@ -363,15 +363,15 @@
                                                         <div class="c-product-controls__counter c-input-counter">
                                                             <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
                                                                    type="text" value="1">
-                                                            <button class="c-input-counter__left-ctrl">-</button>
-                                                            <button class="c-input-counter__right-ctrl">+</button>
+                                                            <button type="button" class="c-input-counter__left-ctrl">-</button>
+                                                            <button type="button" class="c-input-counter__right-ctrl">+</button>
                                                         </div>
-                                                        <button class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                                        <button type="button" class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
                                                                 href="#"> В корзину
                                                         </button>
                                                     </div>
                                                     <div class="c-product-controls__footer">
-                                                        <button class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
+                                                        <button type="button" class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
                                                                 href="#"> Купить в один клик
                                                         </button>
                                                     </div>
@@ -383,7 +383,7 @@
                                         <div class="c-product-card c-product-card_md c-product-card_events">
                                             <div class="c-product-card__actions c-icon-list">
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="18" width="18"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M17.8 15.6H1.7V.9L1.5.7H.2L0 1v16.2l.2.1h17.6l.2-.1v-1.4l-.2-.1Zm-14-2H5l.2-.1v-3.4L5 10H3.8c-.2 0-.2.1-.2.2v3.4l.1.2Zm3.5 0h1.3l.2-.1V6c0-.1 0-.2-.2-.2H7.3l-.2.2v7.5l.2.2Zm3.6 0h1.3l.2-.1V7.8l-.2-.2h-1.3l-.2.2v5.7c0 .1 0 .2.2.2Zm3.5 0h1.3l.2-.1V4.1s0-.2-.2-.2h-1.3l-.2.2v9.4l.2.2Z"
@@ -392,7 +392,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="20" width="22"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M20.6 4.6a6 6 0 0 0-3.3-3.2 6.2 6.2 0 0 0-6.3 1A6.1 6.1 0 0 0 7 .8a6.2 6.2 0 0 0-5.6 3.7A6 6 0 0 0 .9 7c0 .8.1 1.6.5 2.5l1 2a35 35 0 0 0 7.6 7l.6.5c.2.1.6.1.8 0l.6-.4s2.2-1.4 4.4-3.5c1.3-1.2 2.3-2.4 3.1-3.5.5-.7.9-1.5 1.1-2.1.4-.9.5-1.7.5-2.5a6 6 0 0 0-.5-2.4ZM11 17.1s-8.3-5.3-8.3-10A4.4 4.4 0 0 1 11 5a4.4 4.4 0 0 1 4-2.4c2.4 0 4.3 2 4.3 4.3 0 4.8-8.3 10.1-8.3 10.1Z"
@@ -401,7 +401,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="16" width="22"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M20.3 7c.4.6.4 1.4 0 2-1.5 2-5.1 6-9.3 6-4.2 0-7.8-4-9.3-6a1.7 1.7 0 0 1 0-2C3.2 5 6.8 1 11 1c4.2 0 7.8 4 9.3 6v0Z"
@@ -444,15 +444,15 @@
                                                         <div class="c-product-controls__counter c-input-counter">
                                                             <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
                                                                    type="text" value="1">
-                                                            <button class="c-input-counter__left-ctrl">-</button>
-                                                            <button class="c-input-counter__right-ctrl">+</button>
+                                                            <button type="button" class="c-input-counter__left-ctrl">-</button>
+                                                            <button type="button" class="c-input-counter__right-ctrl">+</button>
                                                         </div>
-                                                        <button class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                                        <button type="button" class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
                                                                 href="#"> В корзину
                                                         </button>
                                                     </div>
                                                     <div class="c-product-controls__footer">
-                                                        <button class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
+                                                        <button type="button" class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
                                                                 href="#"> Купить в один клик
                                                         </button>
                                                     </div>
@@ -464,7 +464,7 @@
                                         <div class="c-product-card c-product-card_md c-product-card_events">
                                             <div class="c-product-card__actions c-icon-list">
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="18" width="18"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M17.8 15.6H1.7V.9L1.5.7H.2L0 1v16.2l.2.1h17.6l.2-.1v-1.4l-.2-.1Zm-14-2H5l.2-.1v-3.4L5 10H3.8c-.2 0-.2.1-.2.2v3.4l.1.2Zm3.5 0h1.3l.2-.1V6c0-.1 0-.2-.2-.2H7.3l-.2.2v7.5l.2.2Zm3.6 0h1.3l.2-.1V7.8l-.2-.2h-1.3l-.2.2v5.7c0 .1 0 .2.2.2Zm3.5 0h1.3l.2-.1V4.1s0-.2-.2-.2h-1.3l-.2.2v9.4l.2.2Z"
@@ -473,7 +473,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="20" width="22"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M20.6 4.6a6 6 0 0 0-3.3-3.2 6.2 6.2 0 0 0-6.3 1A6.1 6.1 0 0 0 7 .8a6.2 6.2 0 0 0-5.6 3.7A6 6 0 0 0 .9 7c0 .8.1 1.6.5 2.5l1 2a35 35 0 0 0 7.6 7l.6.5c.2.1.6.1.8 0l.6-.4s2.2-1.4 4.4-3.5c1.3-1.2 2.3-2.4 3.1-3.5.5-.7.9-1.5 1.1-2.1.4-.9.5-1.7.5-2.5a6 6 0 0 0-.5-2.4ZM11 17.1s-8.3-5.3-8.3-10A4.4 4.4 0 0 1 11 5a4.4 4.4 0 0 1 4-2.4c2.4 0 4.3 2 4.3 4.3 0 4.8-8.3 10.1-8.3 10.1Z"
@@ -482,7 +482,7 @@
                                                     </button>
                                                 </div>
                                                 <div class="c-icon-list__item">
-                                                    <button class="c-btn c-btn_product-action">
+                                                    <button type="button" class="c-btn c-btn_product-action">
                                                         <svg fill="none" height="16" width="22"
                                                              xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M20.3 7c.4.6.4 1.4 0 2-1.5 2-5.1 6-9.3 6-4.2 0-7.8-4-9.3-6a1.7 1.7 0 0 1 0-2C3.2 5 6.8 1 11 1c4.2 0 7.8 4 9.3 6v0Z"
@@ -525,15 +525,15 @@
                                                         <div class="c-product-controls__counter c-input-counter">
                                                             <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
                                                                    type="text" value="1">
-                                                            <button class="c-input-counter__left-ctrl">-</button>
-                                                            <button class="c-input-counter__right-ctrl">+</button>
+                                                            <button type="button" class="c-input-counter__left-ctrl">-</button>
+                                                            <button type="button" class="c-input-counter__right-ctrl">+</button>
                                                         </div>
-                                                        <button class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                                        <button type="button" class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
                                                                 href="#"> В корзину
                                                         </button>
                                                     </div>
                                                     <div class="c-product-controls__footer">
-                                                        <button class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
+                                                        <button type="button" class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
                                                                 href="#"> Купить в один клик
                                                         </button>
                                                     </div>
@@ -608,20 +608,20 @@
     </div>
     <div class="c-section c-section_lg">
         <div class="c-section__header">
-            <div class="c-title c-title_md text-uppercase text-center">О компании NTSS</div>
+            <h2 class="c-title c-title_md text-uppercase text-center">О компании NTSS</h2>
         </div>
         <div class="c-section__body">
             <div class="row">
                 <div class="col-5">
-                    <div class="mb-5">
+                    <p class="mb-5">
                         Основанная в 2009 году, NTSS является глобальной высокотехнологичной компанией, предоставляющей
                         высокоскоростные сетевые решения и услуги для нескольких отраслей промышленности. NTSS
                         предлагает широкий спектр стандартных телекоммуникационных продуктов, а также может настраивать
                         продукты в соответствии с индивидуальными потребностями. Мы управляем нашей отраслью,
                         обеспечивая эффективность, высокое качество, непрерывные инновации и легкость доступа ко всем
                         нашим клиентам.
-                    </div>
-                    <button class="c-btn c-btn_style-default c-btn_color-primary c-btn_lg c-btn_width-md" type="button">
+                    </p>
+                    <button type="button" class="c-btn c-btn_style-default c-btn_color-primary c-btn_lg c-btn_width-md">
                         Читать подробнее
                     </button>
                 </div>
@@ -657,8 +657,7 @@
                 <input class="c-subscribe-form__input c-input c-input_style-default c-input_md c-input_color-primary"
                        required type="email">
                 <button class="c-subscribe-form__submit c-btn c-btn_style-default c-btn_color-primary c-btn_md"
-                        type="submit"
-                        type="button"> Подписаться
+                        type="submit"> Подписаться
                 </button>
             </form>
             <div class="d-flex align-items-center justify-content-between">

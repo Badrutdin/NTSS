@@ -16,7 +16,8 @@
         <div class="row align-items-center">
             <div class="col-9">
                 <nav class="row align-items-center">
-                    <div class="col-1"><a class="c-header__logo" href="index.html"><img alt="" src="images/logo.png"></a></div>
+                    <div class="col-1"><a class="c-header__logo" href="index.html"><img alt=""
+                                                                                        src="images/logo.png"></a></div>
                     <div class="col-9">
                         <ul class="c-top-menu row">
                             <li class="col-auto c-top-menu__item"><a class="c-top-menu__link" href="#">Продукты и
@@ -37,7 +38,7 @@
 
                 <ul class="c-header-icon-list">
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" data-search-trigger title="поиск">
+                        <button type="button" class="c-header-icon-list__btn c-btn" data-search-trigger title="поиск">
                          <span class="c-header-icon-list__icon">
                         <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="m21 21-4.5-4.5L21 21Zm-2-10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0v0Z"
@@ -47,10 +48,10 @@
                         </button>
                         <div class="c-header-search d-none" data-search-form>
                             <div class="c-header-search__inner">
-                                <form action="#" class="c-header-search__form">
+                                <form action="#" class="c-search-form c-search-form_header">
                                     <input class="c-input c-input_style-default c-input_md c-input_color-primary"
                                            placeholder="Введите запрос..." required type="text">
-                                    <button class="c-header-search__submit c-btn" title="поиск">
+                                    <button type="submit" class="c-search-form__submit c-btn" title="поиск">
                          <span>
                         <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <path d="m21 21-4.5-4.5L21 21Zm-2-10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0v0Z"
@@ -64,7 +65,7 @@
                         </div>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="сравнения">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="сравнения">
                     <span class="c-header-icon-list__icon">
                         <svg fill="none" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M17.8 15.6H1.7V.9L1.5.7H.2L0 1v16.2l.2.1h17.6l.2-.1v-1.4l-.2-.1Zm-14-2H5l.2-.1v-3.4L5 10H3.8c-.2 0-.2.1-.2.2v3.4l.1.2Zm3.5 0h1.3l.2-.1V6c0-.1 0-.2-.2-.2H7.3l-.2.2v7.5l.2.2Zm3.6 0h1.3l.2-.1V7.8l-.2-.2h-1.3l-.2.2v5.7c0 .1 0 .2.2.2Zm3.5 0h1.3l.2-.1V4.1s0-.2-.2-.2h-1.3l-.2.2v9.4l.2.2Z"
@@ -77,7 +78,7 @@
                         </button>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="избранное">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="избранное">
                     <span class="c-header-icon-list__icon">
                             <svg fill="none" height="20" width="22" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20.6 4.6a6 6 0 0 0-3.3-3.2 6.2 6.2 0 0 0-6.3 1A6.1 6.1 0 0 0 7 .8a6.2 6.2 0 0 0-5.6 3.7A6 6 0 0 0 .9 7c0 .8.1 1.6.5 2.5l1 2a35 35 0 0 0 7.6 7l.6.5c.2.1.6.1.8 0l.6-.4s2.2-1.4 4.4-3.5c1.3-1.2 2.3-2.4 3.1-3.5.5-.7.9-1.5 1.1-2.1.4-.9.5-1.7.5-2.5a6 6 0 0 0-.5-2.4ZM11 17.1s-8.3-5.3-8.3-10A4.4 4.4 0 0 1 11 5a4.4 4.4 0 0 1 4-2.4c2.4 0 4.3 2 4.3 4.3 0 4.8-8.3 10.1-8.3 10.1Z"
@@ -90,7 +91,7 @@
                         </button>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="корзина">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="корзина">
                     <span class="c-header-icon-list__icon">
 <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path
         d="M21.6 16.5h-14l.8-1.5H20c.4 0 .7-.3.8-.7l1.6-9a.8.8 0 0 0-.8-1H6.8l-.1-.6c0-.4-.4-.7-.8-.7H2.3a.8.8 0 1 0 0 1.7h3l.5 2.6L7 14l-1.7 2.9a.8.8 0 0 0-.1.8c.1.3.4.5.7.5h1.5a2.4 2.4 0 1 0 3.9 0H15a2.4 2.4 0 1 0 3.9 0h2.6a.8.8 0 0 0 .6-1.4.8.8 0 0 0-.6-.2ZM7.2 5.9h13.5l-1.4 7.5H8.7L7.2 5.9Zm2.2 14.4a.7.7 0 0 1 0-1.5.7.7 0 0 1 0 1.5Zm7.7 0a.7.7 0 0 1 0-1.5.7.7 0 0 1 0 1.5Z"
@@ -102,7 +103,7 @@
                         </button>
                     </li>
                     <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="выход">
+                        <button type="button" class="c-header-icon-list__btn c-btn" title="выход">
                     <span class="c-header-icon-list__icon">
 <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m11 16 5-4-5-4v3H2v2h9v3Z"
                                                                                  fill="#7C7C7C"/><path
@@ -116,39 +117,49 @@
         </div>
     </div>
 </header>
-<div class="container">
-    <form action="#" class="c-sign-form">
-        <div class="c-sign-form__body">
-            <div class="c-sign-form__title">
-                Регистрация
+<div class="c-content c-content_form-page">
+    <div class="container">
+        <form action="#" class="c-form">
+            <div class="c-form__header">
+                <h2 class="c-form__title">
+                    Регистрация
+                </h2>
             </div>
-            <div class="c-sign-form__item c-input-wrap c-input-wrap_lg">
-                <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
-                       id="login"
-                       required
-                       type="text">
-                <label class="c-input-wrap__label" for="login"> Логин <span class="u-text-red">*</span> </label>
+            <div class="c-form__body">
+                <div class="c-form__fields">
+                    <div class="c-form__field c-input-wrap c-input-wrap_lg">
+                        <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
+                               id="login"
+                               required
+                               type="text">
+                        <label class="c-input-wrap__label" for="login"> Логин <span class="u-text-red">*</span> </label>
+                    </div>
+                    <div class="c-form__field c-input-wrap c-input-wrap_lg">
+                        <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
+                               id="password" required type="password">
+                        <label class="c-input-wrap__label" for="password"> Пароль <span
+                                class="u-text-red">*</span></label>
+                    </div>
+                    <div class="c-form__field c-input-wrap c-input-wrap_lg">
+                        <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
+                               id="repeat_password" required type="password">
+                        <label class="c-input-wrap__label" for="repeat_password"> Повторите пароль <span
+                                class="u-text-red">*</span></label>
+                    </div>
+                </div>
+                <div class="c-form__controls">
+                    <button class="c-form__control c-btn c-btn_style-default c-btn_color-primary c-btn_lg"
+                            type="submit">
+                        Зарегистрироваться
+                    </button>
+                </div>
             </div>
-            <div class="c-sign-form__item c-input-wrap c-input-wrap_lg">
-                <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
-                       id="password" required type="password">
-                <label class="c-input-wrap__label" for="password"> Пароль <span class="u-text-red">*</span></label>
-            </div>
-            <div class="c-sign-form__item c-input-wrap c-input-wrap_lg">
-                <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
-                       id="repeat_password" required type="password">
-                <label class="c-input-wrap__label" for="repeat_password"> Повторите пароль <span
-                        class="u-text-red">*</span></label>
-            </div>
-            <button class="c-sign-form__item c-btn c-btn_style-default c-btn_color-primary c-btn_lg" type="submit">
-                Зарегистрироваться
-            </button>
-            <div class="c-sign-form__item text-center">
+            <div class="c-form__footer text-center">
                 Уже зарегистрированы? <a class="c-link c-link_events d-inline-block" href="#"> <b> Тогда
                 авторизуйтесь </b></a>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 <footer class="c-footer c-section-xs c-bg-primary">
     <div class="container">
@@ -158,8 +169,7 @@
                 <input class="c-subscribe-form__input c-input c-input_style-default c-input_md c-input_color-primary"
                        required type="email">
                 <button class="c-subscribe-form__submit c-btn c-btn_style-default c-btn_color-primary c-btn_md"
-                        type="submit"
-                        type="button"> Подписаться
+                        type="submit"> Подписаться
                 </button>
             </form>
             <div class="d-flex align-items-center justify-content-between">

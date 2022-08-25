@@ -16,33 +16,33 @@
 }
 
 .c-input_style-default.c-input_color-primary {
-  background-color: #FFFFFF;
-  border-color: #F2F2F2;
-  color: #000000;
+  background-color: $color-lightest;
+  border-color: $color-lighten;
+  color: $color-darkest;
 
   &::placeholder {
-    color: #7C7C7C;
+    color: $color-dark;
   }
 
   &:hover, &:focus {
-    border-color: #7C7C7C;
+    border-color: $color-dark;
 
     &::placeholder {
-      color: #555555;
+      color: $color-darken;
     }
   }
 
   &:not(:placeholder-shown) {
-    border-color: #21458C;
+    border-color: $color-secondary;
   }
 
   &:not(:placeholder-shown):hover, &:not(:placeholder-shown):focus {
-    border-color: #82A4E8;
+    border-color: $color-primary;
   }
 }
 
 .c-input_style-secondary.c-input_color-primary {
-  background-color: #F2F2F2;
+  background-color: $color-lighten;
 }
 
 .c-input_md {
@@ -68,23 +68,23 @@
   &__label {
     pointer-events: none;
     position: absolute;
-    background-color: #FFFFFF;
-    transition: transform .05s ease-out;
+    background-color: $color-lightest;
+    transition: transform .2s ease-in-out;
   }
-
+  .c-input-wrap__label{
+    font-size: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   &_md {
     .c-input-wrap__label {
       left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 
   &_lg {
     .c-input-wrap__label {
       left: 30px;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 &_changed{

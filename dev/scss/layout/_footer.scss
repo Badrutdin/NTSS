@@ -4,6 +4,7 @@
 .c-bottom-menu__item:first-child{
   font-weight: 600;
   margin-bottom: 14px;
+  color: $color-darkest;
 }
 
 .c-footer__logo{
@@ -12,12 +13,13 @@
 }
 .c-bottom-menu__link{
   &:hover,&:focus{
-    color: #82A4E8;
+    color: $color-primary;
   }
 }
 .c-footer{
   padding-top: 16px;
   padding-bottom: 35px;
+  background-color: $color-lighten;
 }
 
 .c-social{

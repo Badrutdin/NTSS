@@ -5,9 +5,12 @@
 .c-breadcrumbs__item + .c-breadcrumbs__item:before {
   margin-right: 10px;
   margin-left: 10px;
-  content: '-';
+  content: '—';
 }
 
+.c-breadcrumbs__title {
+  font-size: 12px;
+}
 .c-breadcrumbs__item {
   display: inline;
   word-break: break-all;
@@ -19,7 +22,7 @@
   transition: text-shadow .2s ease;
 
   &:hover, &:focus {
-    color: #82A4E8;
+    color: $color-primary;
   }
 
 }

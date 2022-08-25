@@ -11,12 +11,12 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: text-shadow .2s ease, box-shadow .2s ease;
+  transition: background-color .2s ease;
 
   &_slider-nav {
     width: 52px;
     height: 52px;
-    background-color: #FFFFFF;
+    background-color: $color-lightest;
   }
 
   &_width-md {
@@ -29,37 +29,37 @@
 }
 
 .c-btn_style-default {
-  background-color: #FFFFFF;
-  color: #7C7C7C;
+  background-color: $color-lightest;
+  color: $color-dark;
   white-space: nowrap;
   text-overflow: ellipsis;
 
   &:hover, &:focus {
-    background-color: #F2F2F2;
+    background-color: $color-lighten;
   }
 }
 
 .c-btn_style-default.c-btn_color-primary {
-  background-color: #82A4E8;
-  color: #FFFFFF;
+  background-color: $color-primary;
+  color: $color-lightest;
 
   &:hover, &:focus {
-    background-color: #6C95E8;
+    background-color: $color-tertiary;
   }
 }
 
 .c-btn_style-default.c-btn_color-primary-dark {
-  background-color: #21458C;
-  color: #FFFFFF;
+  background-color: $color-secondary;
+  color: $color-lightest;
 }
 
 .c-btn_style-default.c-btn_color-light {
-  background-color: #F2F2F2;
-  color: #7C7C7C;
-
+  background-color: $color-lightest;
+  color: $color-dark;
+  border: 1px solid #F2F2F2;
   &:hover, &:focus {
-    background-color: #7C7C7C;
-    color: #FFFFFF;
+    background-color: $color-dark;
+    color: $color-lightest;
   }
 }
 
@@ -106,7 +106,7 @@
   font-size: 18px;
   font-weight: 600;
   border-radius: 6px;
-  color: #7C7C7C;
+  color: $color-dark;
   cursor: pointer;
 
   & .c-btn__icon path {
@@ -114,11 +114,11 @@
   }
 
   &:focus {
-    border: 1px solid #82A4E8;
+    border: 1px solid $color-primary;
   }
 
   &:hover, &.active {
-    background-color: #82A4E8;
-    color: #FFFFFF;
+    background-color: $color-primary;
+    color: $color-lightest;
   }
 }

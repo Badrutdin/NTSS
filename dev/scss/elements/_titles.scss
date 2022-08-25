@@ -1,6 +1,7 @@
 .c-title {
   font-weight: 500;
   line-height: 1.2;
+  color: $color-darken;
   &_xs {
     font-size: 20px;
   }
@@ -15,5 +16,9 @@
 
   &_lg {
     font-size: 36px;
+  }
+  &_main{
+    margin-bottom: 40px;
+    text-transform: uppercase;
   }
 }

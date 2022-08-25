@@ -3,7 +3,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  color: #7C7C7C;
+  color: $color-dark;
+
 }
 
 .c-accordion-list {
@@ -20,14 +21,14 @@ body {
 
   &__item {
     display: flex;
-    color: #7C7C7C;
+    color: $color-dark;
   }
 }
 
 .c-checkbox {
   &_primary {
     .c-checkbox__label:before {
-      border-color: #82A4E8;
+      border-color: $color-primary;
     }
   }
 
@@ -56,7 +57,7 @@ body {
       display: inline-block;
       width: 20px;
       height: 20px;
-      background-color: #FFFFFF;
+      background-color: $color-lightest;
       border: 1px solid;
       border-radius: 4px;
       background-position: center;
@@ -92,8 +93,8 @@ body {
 
 .c-category-card {
   height: 100%;
-  background-color: #FFFFFF;
-  border: 1px solid #F2F2F2;
+  background-color: $color-lightest;
+  border: 1px solid $color-lighten;
   padding: 10px 10px 20px;
   display: block;
   text-decoration: none;
@@ -124,7 +125,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
-    color: #7C7C7C;
+    color: $color-dark;
     height: 2.8em;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
@@ -148,7 +149,7 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
-    color: #7C7C7C;
+    color: $color-dark;
     margin-top: 10px;
     height: 2.3em;
     text-overflow: ellipsis;
@@ -163,7 +164,7 @@ body {
   &__body {
     height: 157px;
     max-height: 100%;
-    border: 1px solid #F2F2F2;
+    border: 1px solid $color-lighten;
     padding: 10px 18px;
     background-position: center;
     background-size: contain;
@@ -173,19 +174,20 @@ body {
 
 .c-news-card {
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: $color-lightest;
   padding: 20px;
   border-radius: 2px;
   text-decoration: none;
   display: block;
-  color: #7C7C7C;
+  color: $color-dark;
   transition: background-color, box-shadow, color, .2s;
+  border: 1px solid $color-lighten;
 
   &_events {
     &:hover, &:focus {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-      background-color: #82A4E8;
-      color: #FFFFFF;
+      background-color: $color-primary;
+      color: $color-lightest;
 
       .c-news-card__preview {
         background-size: 110%;
@@ -224,7 +226,7 @@ body {
 
 .c-product-card {
   border-radius: 6px;
-  background-color: #FFFFFF;
+  background-color: $color-lightest;
   position: relative;
   transition: box-shadow, .2s ease-in;;
 
@@ -239,7 +241,10 @@ body {
   }
 
   &__actions {
-    height: 112px;
+    .c-icon-list {
+      height: 112px;
+    }
+
     position: absolute;
   }
 
@@ -339,23 +344,23 @@ body {
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    color: #555555;
+    color: $color-darken;
 
     &:hover, &:focus {
-      color: #82A4E8;
+      color: $color-primary;
     }
   }
 
   &__articul {
     font-size: 12px;
-    color: #21458C;
+    color: $color-secondary;
   }
 
   &__price {
     font-weight: 500;
     font-size: 18px;
     line-height: 1.2;
-    color: #000000;
+    color: $color-darkest;
   }
 
 
@@ -378,6 +383,11 @@ body {
     width: 330px;
     flex-shrink: 0;
     margin-right: 20px;
+  }
+
+  &_sm {
+    flex-direction: column;
+    width: 280px;
   }
 
   &__body {
@@ -432,20 +442,23 @@ body {
     width: 100%;
   }
 
-  &_sm &__item {
-    width: 220px;
+  &_fixed-item.c-product-list_sm &__item{
+      width: 220px;
+  }
+  &_fixed-item.c-product-list_md &__item{
+      width: 286px;
+  }
+  &_fixed-item.c-product-list_lg &__item{
+      width: 329px;
   }
 
-  &_md &__item {
-    width: 286px;
-  }
 }
 
 .c-product-price {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
-  color: #000000;
+  color: $color-darkest;
 
   &__old {
     font-size: 12px;
@@ -454,19 +467,19 @@ body {
 }
 
 .c-aside-btn {
-  background-color: #FFFFFF;
-  color: #444;
+  border: 1px solid $color-lighten;
+  border-radius: 4px;
+  background-color: $color-lightest;
+  color: $color-darken;
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: none;
   text-align: left;
-  outline: none;
   font-size: 15px;
 
-  &.active, &:hover {
-    background-color: #82A4E8;
-    color: #FFFFFF;
+  &_active, &:hover {
+    background-color: $color-primary;
+    color: $color-lightest;
   }
 }
 
@@ -483,12 +496,12 @@ body {
   background-color: transparent;
 
   rect {
-    fill: #82A4E8
+    fill: $color-primary;
   }
 
-  &__active {
+  &:hover, &:focus, &_active {
     rect {
-      fill: #21458C
+      fill: $color-secondary;
     }
   }
 }
@@ -579,11 +592,10 @@ body {
 .c-link {
   text-decoration: none;
   display: block;
-  color: inherit;
 
   &_events {
     &:hover, &:focus {
-      color: #82A4E8;
+      color: $color-primary;
     }
   }
 }
@@ -595,7 +607,7 @@ body {
 }
 
 .u-bg-tertiary {
-  background-color: #21458C;
+  background-color: $color-secondary;
 }
 
 .c-main-banner {
@@ -628,7 +640,7 @@ body {
   }
 
   &__title {
-    color: #000000;
+    color: $color-darkest;
     font-size: 40px;
     line-height: 1.4;
     text-transform: uppercase;
@@ -638,16 +650,27 @@ body {
   }
 }
 
-.c-sign-form {
+.c-form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 160px;
-  margin-bottom: 160px;
+  flex-direction: column;
 
   &__body {
     width: 850px;
     max-width: 100%;
+  }
+
+  &__field {
+    margin-bottom: 20px;
+  }
+
+  &__control {
+    margin-bottom: 20px;
+  }
+
+  &__header {
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -655,21 +678,13 @@ body {
     font-size: 36px;
     line-height: 1.2;
     text-transform: uppercase;
-    color: #555555;
-    margin-bottom: 40px;
+    color: $color-darken;
     text-align: center;
   }
 
-  &__item {
-    width: 100%;
-
-    & + & {
-      margin-top: 20px;
-    }
-
-    &:last-child {
-      margin-top: 30px;
-    }
+  &__footer {
+    margin-top: 30px;
+    color: $color-darken;
   }
 }
 
@@ -695,7 +710,10 @@ body {
     .c-doc-item__view {
       width: 124px;
       margin-right: 20px;
-      background-color: #F2F2F2;
+      background-color: $color-lighten;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
 
       &:before {
         content: "";
@@ -707,7 +725,7 @@ body {
 
     .c-doc-item__name {
       margin-bottom: 30px;
-      color: #555555;
+      color: $color-darken;
       display: block;
     }
 
@@ -718,19 +736,20 @@ body {
     .c-doc-item__size {
       display: flex;
       align-items: center;
+      font-size: 12px;
     }
   }
 
   &_row {
     &:hover, &:focus {
       box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px inset, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px inset;
-      background-color: rgba(#82A4E8, .1);
+      background-color: rgba($color-primary, .1);
     }
 
     align-items: center;
     border-radius: 6px;
     padding: 18px 20px;
-    background-color: #F2F2F2;
+    background-color: $color-lighten;
 
     .c-doc-item__view {;
       margin-right: 10px;
@@ -739,7 +758,7 @@ body {
 
     .c-doc-item__name {
       text-transform: uppercase;
-      color: #555555;
+      color: $color-darken;
       font-weight: 500;
       width: 100%;
       overflow: hidden;
@@ -761,13 +780,11 @@ body {
 
 }
 
-.c-docs-list {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.c-docs-section {
+  margin-bottom: 40px;
 
   &__header {
     margin-bottom: 40px;
-    display: flex;
     align-items: center;
   }
 
@@ -775,7 +792,7 @@ body {
     font-weight: 500;
     font-size: 26px;
     line-height: 1.2;
-    color: #555555;
+    color: $color-darken;
 
   }
 
@@ -784,46 +801,65 @@ body {
     font-weight: 500;
     font-size: 12px;
     line-height: 1.4;
-    color: #7C7C7C;
+    color: $color-dark;
   }
 
+}
+
+.c-docs-list {
   &__item {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
-.c-files-list{
-  &_cols-1 {
-    .c-files-list__list .c-files-list__item:nth-child(even) .c-doc-item{
-      background-color: #FFFFFF;
+
+  .c-files-section {
+    &_cols-1 {
+      .c-files-list .c-files-list__item:nth-child(even) .c-doc-item {
+        background-color: $color-lightest;
+      }
+    }
+
+    &_cols-2 {
+      .c-files-list .c-files-list__item:nth-child(4n - 1) .c-doc-item, .c-files-list .c-files-list__item:nth-child(4n) .c-doc-item {
+        background-color: $color-lightest;
+      }
+    }
+
+    &__footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__link {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.4;
+      color: $color-dark;
+    }
+
+    &__header {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      color: $color-darkest;
     }
   }
-  &_cols-2{
-    .c-files-list__list .c-files-list__item:nth-child(4n - 1) .c-doc-item, .c-files-list__list .c-files-list__item:nth-child(4n) .c-doc-item {
-      background-color: #FFFFFF;
-    }
-  }
-  &__footer{
-    margin-top: 16px;
-    display: flex;
-    justify-content: flex-end;
-  }
-  &__link{
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.4;
-    color: #7C7C7C;
-  }
-  &__header {
-    margin-bottom: 30px;
-  }
 
-  &__title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    color: #000000;
-  }
 }
 
+.c-content {
+  &_default {
+    padding-bottom: 100px;
+  }
 
+  &_form-page {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+}

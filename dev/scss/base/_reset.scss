@@ -133,7 +133,7 @@ button, input, optgroup, select, textarea {
 }
 a{
 	text-decoration: underline;
-	color: $color-secondary;
+	color: inherit;
 	&:hover,&:focus{
 		text-decoration: none;
 	}
