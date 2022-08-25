@@ -10,15 +10,15 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   overflow: hidden;
   transition: text-shadow .2s ease, box-shadow .2s ease;
-&_slider-nav{
-  width: 52px;
-  height: 52px;
-  background-color: #FFFFFF;
-}
+
+  &_slider-nav {
+    width: 52px;
+    height: 52px;
+    background-color: #FFFFFF;
+  }
+
   &_width-md {
     width: 226px;
     max-width: 100%;
@@ -31,6 +31,8 @@
 .c-btn_style-default {
   background-color: #FFFFFF;
   color: #7C7C7C;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   &:hover, &:focus {
     background-color: #F2F2F2;

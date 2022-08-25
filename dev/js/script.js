@@ -103,7 +103,7 @@ $(document).ready(function () {
         </button>`],
     })
 
-    acc($('.accordion'));
+    acc($('[data-accordion]'));
 
     function customLabelHandler(inputSelector) {
         $(document).on('focus',
