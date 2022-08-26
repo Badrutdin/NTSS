@@ -149,7 +149,7 @@ $(document).ready(function () {
         $.magnificPopup.close()
     })
 
-    routHelper(['authorization','registration','docs','docs2','price-list','selection-tile','selection-list','tech-docs','favorite','search-result'])
+    routHelper(['authorization','registration','docs','docs2','price-list','selection-tile','selection-list','tech-docs','favorite','search-result','add-item-in-cart'])
 });
 
 if (!Object.getOwnPropertyDescriptor(Element.prototype, 'classList')) {
