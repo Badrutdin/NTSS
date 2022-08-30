@@ -27,12 +27,21 @@ function acc($target, activeClass) {
 
 $(document).ready(function () {
 
-    $('[data-ajax-news-btn]').on('click', function (){
+    $('[data-ajax-news-btn]').on('click', function () {
         $.ajax({
-            url:'ajax/ajax-news.html'
+            url: 'ajax/ajax-news.html'
         }).done((result) => {
             $('[data-ajax-news-container]').append(result)
         })
+    })
+    $('[type="reset"]').on('click', function () {
+        $(document).trigger('c-form-reset')
+    })
+    $(document).on('c-form-reset', function () {
+        setTimeout(function () {
+            $('input[type=tel]').trigger('input')
+        })
+
     })
     $(document).mouseup(function (e) {
         const form = $('[data-search-form]');
