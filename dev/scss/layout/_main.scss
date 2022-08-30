@@ -755,7 +755,7 @@ body {
 
     .c-doc-item__view {;
       margin-right: 10px;
-      flex-shrink: 0;
+      flex: 0 0 18px;
     }
 
     .c-doc-item__name {
@@ -767,6 +767,7 @@ body {
       text-overflow: ellipsis;
       max-height: 1.2em;
       display: block;
+      flex: 1 0 1%;
     }
 
     .c-doc-item__icon {
@@ -776,7 +777,7 @@ body {
     .c-doc-item__size {
       display: flex;
       align-items: center;
-      flex-shrink: 0;
+      flex: 0 0 auto;
     }
   }
 
@@ -895,9 +896,11 @@ body {
       line-height: 24px;
 
     }
+
     .c-tabs__link + .c-tabs__link {
       padding-left: 25px;
     }
+
     .c-tabs__link:hover, .c-tabs__link:focus, .c-tabs__link-active {
       color: $color-primary;
       border-color: $color-primary;
