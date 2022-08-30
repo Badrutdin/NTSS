@@ -26,6 +26,14 @@ function acc($target, activeClass) {
 }
 
 $(document).ready(function () {
+
+    $('[data-ajax-news-btn]').on('click', function (){
+        $.ajax({
+            url:'ajax/ajax-news.html'
+        }).done((result) => {
+            $('[data-ajax-news-container]').append(result)
+        })
+    })
     $(document).mouseup(function (e) {
         const form = $('[data-search-form]');
         if (!form.is(e.target) && form.has(e.target).length === 0) {
@@ -133,7 +141,7 @@ $(document).ready(function () {
         downArrowIcon: 'false',
     }
     // phone mask
-    $('input[type=tel]').mask('r0 (000) 000-00-00', phoneMaskOptions);
+    $('input[type=tel]').mask('r0 000 000 00 00', phoneMaskOptions);
 
     // ratio
     $('[data-video-frame]').on('click', function () {
@@ -149,24 +157,42 @@ $(document).ready(function () {
         $.magnificPopup.close()
     })
 
-    routHelper(['authorization','registration','docs','docs2','price-list','selection-tile','selection-list','tech-docs','favorite','search-result','add-item-in-cart'])
+    routHelper([
+        'authorization',
+        'registration',
+        'docs',
+        'docs2',
+        'price-list',
+        'selection-tile',
+        'selection-list',
+        'tech-docs',
+        'favorite',
+        'search-result',
+        'add-item-in-cart',
+        'news-list',
+        'news-detail',
+        'lk-dannye'])
 });
-
-if (!Object.getOwnPropertyDescriptor(Element.prototype, 'classList')) {
-    if (HTMLElement && Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'classList')) {
-        Object.defineProperty(Element.prototype, 'classList', Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'classList'));
-    }
-}
 
 function routHelper(pages) {
     let btn = $(`<button>Меню</button>`)
     let menuContainer = $(`<div class="d-none"><ul></ul></div>`)
-    btn.css({'z-index':999,position: 'fixed', top: 0})
-    menuContainer.css({'z-index':999,position: 'fixed', top: '50px', 'min-width': '200px', 'background-color': '#F2F2F2', 'overflow-y':'scroll','padding':'20px','font-size':'40px','max-height':'80vh'})
+    btn.css({'z-index': 999, position: 'fixed', top: 0})
+    menuContainer.css({
+        'z-index': 999,
+        position: 'fixed',
+        top: '50px',
+        'min-width': '200px',
+        'background-color': '#F2F2F2',
+        'overflow-y': 'scroll',
+        'padding': '20px',
+        'font-size': '40px',
+        'max-height': '80vh'
+    })
     btn.click(function () {
         menuContainer.toggleClass('d-none')
     })
-    $.each(pages, function (k,v) {
+    $.each(pages, function (k, v) {
         menuContainer.find('ul').append(`<li class="mt-4 "><a class="text-uppercase c-link c-link_events" href="http://localhost:3000/${v}">${v}</a></li>`)
 
     })

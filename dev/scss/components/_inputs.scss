@@ -65,32 +65,99 @@
 .c-input-wrap {
   position: relative;
 
-  &__label {
-    pointer-events: none;
-    position: absolute;
-    background-color: $color-lightest;
-    transition: transform .2s ease-in-out;
-  }
-  .c-input-wrap__label{
-    font-size: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &_md {
+  &_anim-label {
     .c-input-wrap__label {
-      left: 20px;
+      pointer-events: none;
+      position: absolute;
+      background-color: $color-lightest;
+      transition: transform .2s ease-in-out;
+      font-size: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &.c-input-wrap_md {
+      .c-input-wrap__label {
+        left: 20px;
+      }
+    }
+
+    &.c-input-wrap_lg {
+      .c-input-wrap__label {
+        left: 30px;
+      }
+    }
+
+    &.c-input-wrap_changed {
+      .c-input-wrap__label {
+        transform: translateY(-200%);
+      }
     }
   }
 
-  &_lg {
-    .c-input-wrap__label {
-      left: 30px;
-    }
-  }
-&_changed{
-  & .c-input-wrap__label{
-    transform: translateY(-200%);
-  }
 }
 
+.c-label{
+  display: flex;
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #555555;
 }
+
+.c-input_textarea{
+  resize: none;
+  padding: 22px 30px;
+  height: auto;
+}
+
+
+/* hide */
+.c-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+/* label */
+.c-checkbox-primary .c-checkbox + .c-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $color-primary;
+  border-radius: 5px;
+  margin-right: 14px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+/* focus */
+.c-checkbox-primary .c-checkbox:focus + .c-label::before {
+  border-color: $color-primary;
+  transition: border .2s ease-in-out;
+}
+
+/* checked */
+.c-checkbox-primary .c-checkbox:checked + .c-label::before {
+  border-color: $color-primary;
+  border-width: 8px;
+  background-image: url("");
+}
+
+/*disabled */
+.c-checkbox-primary .c-checkbox:disabled + .c-label {
+  color: #C0CBD7;
+}
+
+.c-checkbox-primary .c-checkbox:disabled + .c-label::before {
+  background-color: rgba($color-dark,.2) ;
+  border-color: $color-dark;
+}
+
+/*disabled checked*/
+.c-checkbox-primary .c-checkbox:disabled:checked + .c-label::before {
+  background-color: rgba($color-dark,.2) ;
+  border-color: $color-dark;
+  background-image: url("");
+}
+

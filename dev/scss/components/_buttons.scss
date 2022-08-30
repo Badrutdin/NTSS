@@ -39,6 +39,22 @@
   }
 }
 
+.c-btn_style-ghost {
+  background-color: transparent;
+  border-bottom: 1px solid;
+
+}
+
+.c-btn_style-ghost.c-btn_color-primary {
+  color:$color-dark;
+  border-color: $color-secondary;
+  &:hover,&:focus{
+    color: $color-primary;
+    border-color: $color-primary;
+
+  }
+}
+
 .c-btn_style-default.c-btn_color-primary {
   background-color: $color-primary;
   color: $color-lightest;
