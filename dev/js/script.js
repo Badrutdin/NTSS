@@ -180,7 +180,9 @@ $(document).ready(function () {
         'add-item-in-cart',
         'news-list',
         'news-detail',
-        'lk-dannye'])
+        'lk-dannye',
+        'lk-spec',
+        'price-request'])
 });
 
 function routHelper(pages) {

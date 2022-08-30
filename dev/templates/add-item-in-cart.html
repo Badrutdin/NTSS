@@ -13,146 +13,110 @@
     <link href="template_styles.css" rel="stylesheet">
 </head>
 <body>
-<header class="c-header">
-    <div class="container position-relative">
-        <div class="row align-items-center">
-            <div class="col-9">
-                <nav class="row align-items-center">
-                    <div class="col-1"><a class="c-header__logo" href="index.html"><img alt=""
-                                                                                        src="images/logo.png"></a></div>
-                    <div class="col-9">
-                        <ul class="c-top-menu row">
-                            <li class="col-auto c-top-menu__item"><a class="c-top-menu__link" href="#">Продукты и
-                                решения</a>
-                            </li>
-                            <li class="col-auto c-top-menu__item c-top-menu__item_active"><a class="c-top-menu__link"
-                                                                                             href="#">Подбор
-                                по параметрам</a></li>
-                            <li class="col-auto c-top-menu__item"><a class="c-top-menu__link" href="#">Гарантия</a></li>
-                            <li class="col-auto c-top-menu__item"><a class="c-top-menu__link" href="#">Защита в
-                                проекте</a></li>
-                            <li class="col-auto c-top-menu__item"><a class="c-top-menu__link" href="#">Контакты</a></li>
-                        </ul>
-                    </div>
-                </nav>
+<div class="container">
+    <div class="c-added-basket-section">
+        <div class="c-added-basket-section__main">
+            <div class="c-added-basket-section__main-title"><h2 class="c-title c-title_lg c-title_main text-center">
+                Товар добавлен в корзину</h2>
             </div>
-            <div class="col-3">
-
-                <ul class="c-header-icon-list">
-                    <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" data-search-trigger title="поиск" type="button">
-                         <span class="c-header-icon-list__icon">
-                        <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m21 21-4.5-4.5L21 21Zm-2-10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0v0Z"
-                                  stroke="#7C7C7C" stroke-linecap="round" stroke-width="2"/>
-                        </svg>
-                    </span>
-                        </button>
-                        <div class="c-header-search d-none" data-search-form>
-                            <div class="c-header-search__inner">
-                                <form action="#" class="c-search-form c-search-form_header">
-                                    <input class="c-input c-input_style-default c-input_md c-input_color-primary"
-                                           placeholder="Введите запрос..." required type="text">
-                                    <button class="c-search-form__submit c-btn" title="поиск" type="submit">
-                         <span>
-                        <svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m21 21-4.5-4.5L21 21Zm-2-10.5a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0v0Z"
-                                  stroke="#21458C" stroke-linecap="round" stroke-width="2"/>
-                        </svg>
-                    </span>
-                                    </button>
-
-                                </form>
+            <div class="c-added-basket-section__main-product">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <div class="align-items-center c-product-card_left-control c-product-card_card-added  c-product-card c-product-card_bordered c-product-card_lg ">
+                            <div class="c-checkbox-primary">
+                                <input class="c-checkbox c-checkbox_primary" id="example-checkbox"
+                                       type="checkbox">
+                                <label class="c-label mb-0" for="example-checkbox"></label>
                             </div>
-                        </div>
-                    </li>
-                    <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="сравнения" type="button">
-                    <span class="c-header-icon-list__icon">
-                        <svg fill="none" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M17.8 15.6H1.7V.9L1.5.7H.2L0 1v16.2l.2.1h17.6l.2-.1v-1.4l-.2-.1Zm-14-2H5l.2-.1v-3.4L5 10H3.8c-.2 0-.2.1-.2.2v3.4l.1.2Zm3.5 0h1.3l.2-.1V6c0-.1 0-.2-.2-.2H7.3l-.2.2v7.5l.2.2Zm3.6 0h1.3l.2-.1V7.8l-.2-.2h-1.3l-.2.2v5.7c0 .1 0 .2.2.2Zm3.5 0h1.3l.2-.1V4.1s0-.2-.2-.2h-1.3l-.2.2v9.4l.2.2Z"
-                                                                          fill="#7C7C7C"></path>
-                                                                </svg>
-                    </span>
-                            <span class="c-header-icon-list__count">
-                        <span class="c-header-icon-list__count-text">0</span>
-                    </span>
-                        </button>
-                    </li>
-                    <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="избранное" type="button">
-                    <span class="c-header-icon-list__icon">
-                            <svg fill="none" height="20" width="22" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M20.6 4.6a6 6 0 0 0-3.3-3.2 6.2 6.2 0 0 0-6.3 1A6.1 6.1 0 0 0 7 .8a6.2 6.2 0 0 0-5.6 3.7A6 6 0 0 0 .9 7c0 .8.1 1.6.5 2.5l1 2a35 35 0 0 0 7.6 7l.6.5c.2.1.6.1.8 0l.6-.4s2.2-1.4 4.4-3.5c1.3-1.2 2.3-2.4 3.1-3.5.5-.7.9-1.5 1.1-2.1.4-.9.5-1.7.5-2.5a6 6 0 0 0-.5-2.4ZM11 17.1s-8.3-5.3-8.3-10A4.4 4.4 0 0 1 11 5a4.4 4.4 0 0 1 4-2.4c2.4 0 4.3 2 4.3 4.3 0 4.8-8.3 10.1-8.3 10.1Z"
-                                                                          fill="#7C7C7C"></path>
-                                                                </svg>
-                    </span>
-                            <span class="c-header-icon-list__count">
-                        <span class="c-header-icon-list__count-text">99+</span>
-                    </span>
-                        </button>
-                    </li>
-                    <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="корзина" type="button">
-                    <span class="c-header-icon-list__icon">
-<svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path
-        d="M21.6 16.5h-14l.8-1.5H20c.4 0 .7-.3.8-.7l1.6-9a.8.8 0 0 0-.8-1H6.8l-.1-.6c0-.4-.4-.7-.8-.7H2.3a.8.8 0 1 0 0 1.7h3l.5 2.6L7 14l-1.7 2.9a.8.8 0 0 0-.1.8c.1.3.4.5.7.5h1.5a2.4 2.4 0 1 0 3.9 0H15a2.4 2.4 0 1 0 3.9 0h2.6a.8.8 0 0 0 .6-1.4.8.8 0 0 0-.6-.2ZM7.2 5.9h13.5l-1.4 7.5H8.7L7.2 5.9Zm2.2 14.4a.7.7 0 0 1 0-1.5.7.7 0 0 1 0 1.5Zm7.7 0a.7.7 0 0 1 0-1.5.7.7 0 0 1 0 1.5Z"
-        fill="#7C7C7C"/></svg>
-                    </span>
-                            <span class="c-header-icon-list__count">
-                        <span class="c-header-icon-list__count-text">5</span>
-                    </span>
-                        </button>
-                    </li>
-                    <li class="c-header-icon-list__item">
-                        <button class="c-header-icon-list__btn c-btn" title="выход" type="button">
-                    <span class="c-header-icon-list__icon">
-<svg fill="none" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m11 16 5-4-5-4v3H2v2h9v3Z"
-                                                                                 fill="#7C7C7C"/><path
-        d="M13 3a9 9 0 0 0-6.4 2.6L8 7.1a7 7 0 0 1 10 0 7 7 0 0 1 0 9.9 7 7 0 0 1-10 0l-1.4 1.4a9 9 0 0 0 12.8 0 9 9 0 0 0 0-12.8A9 9 0 0 0 13 3Z"
-        fill="#7C7C7C"/></svg>
-                    </span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-<div class="container">
-    <div class="c-breadcrumbs">
-        <ul class="c-breadcrumbs__list">
-            <li class="c-breadcrumbs__item">
-                <a class="c-breadcrumbs__link" href="#">
-                    <span class="c-breadcrumbs__title"><img alt="" height="14" src="images/home.png" width="14"></span>
-                </a>
-            </li>
-            <li class="c-breadcrumbs__item">
-                <span class="c-breadcrumbs__title">Избранное</span>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-10">
-            <h2 class="c-title c-title_lg c-title_main text-center">Товар добавлен в корзину</h2>
-            <div class="c-content c-content_default">
-                <div class="c-product-list c-product-list_lg row">
-                    <div class="col-12 col-xl-6 c-product-list__item">
-                        <div class="c-product-card c-product-card_lg c-product-card_events">
-
                             <a class="c-product-card__preview" href="#">
                                 <img alt="" src="images/cupboard.png">
                             </a>
                             <div class="c-product-card__body">
                                 <div class="c-product-card__description">
                                     <div class="c-product-desc">
-                                        <a class="c-product-desc__text c-product-desc__item" href="#"> 19" Напольный
-                                            серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе, двери
-                                            передняя перфорированная, задние двойные перфорированные, боковые стенки,
+                                        <a class="c-product-desc__text c-product-desc__item" href="#"> 19"
+                                            Напольный серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной
+                                            в сборе, двери передняя перфорированная, задние двойные
+                                            перфорированные, боковые стенки, регулируемые опоры, ролики, RAL
+                                            9005 </a>
+                                        <div class="c-product-desc__articul c-product-desc__item">
+                                            343423426524345
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c-product-card__controls">
+                                    <div class="c-product-controls">
+                                        <div class="c-product-controls__body">
+                                            <div class="c-product-controls__counter c-input-counter">
+                                                <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
+                                                       type="text" value="1">
+                                                <button class="c-input-counter__left-ctrl" type="button">-
+                                                </button>
+                                                <button class="c-input-counter__right-ctrl" type="button">+
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="c-total-price">
+                            <div class="c-total-price__item">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="c-total-price__position">Товаров в корзине:</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="c-total-price__price">3</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-total-price__item">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="c-total-price__position">Стоимость:</div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="c-total-price__price">24 590 ₽</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-added-basket-section__related">
+            <h2 class="c-added-basket-section__related-title">С этим товаром покупают
+            </h2>
+            <div class="c-added-basket-section__related-list">
+                <div class="c-product-list c-product-list_lg row">
+                    <div class="col-12 col-xl-6 c-product-list__item">
+                        <div class="align-items-center c-product-card_left-control c-product-card c-product-card_lg c-product-card_bordered c-product-card_events">
+                            <div class="c-checkbox-primary">
+                                <input class="c-checkbox c-checkbox_primary" id="example-checkbox"
+                                       type="checkbox">
+                                <label class="c-label mb-0" for="example-checkbox"></label>
+                            </div>
+                            <a class="c-product-card__preview" href="#">
+                                <img alt="" src="images/cupboard.png">
+                            </a>
+                            <div class="c-product-card__body">
+                                <div class="c-product-card__description">
+                                    <div class="c-product-desc">
+                                        <a class="c-product-desc__text c-product-desc__item" href="#"> 19"
+                                            Напольный
+                                            серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе,
+                                            двери
+                                            передняя перфорированная, задние двойные перфорированные, боковые
+                                            стенки,
                                             регулируемые опоры, ролики, RAL 9005 </a>
-                                        <div class="c-product-desc__articul c-product-desc__item"> 343423426524345</div>
+                                        <div class="c-product-desc__articul c-product-desc__item">
+                                            343423426524345
+                                        </div>
 
                                     </div>
                                 </div>
@@ -162,8 +126,151 @@
                                             <div class="c-product-controls__counter c-input-counter">
                                                 <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
                                                        type="text" value="1">
-                                                <button class="c-input-counter__left-ctrl" type="button">-</button>
-                                                <button class="c-input-counter__right-ctrl" type="button">+</button>
+                                                <button class="c-input-counter__left-ctrl" type="button">-
+                                                </button>
+                                                <button class="c-input-counter__right-ctrl" type="button">+
+                                                </button>
+                                            </div>
+                                            <button class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                                    href="#" type="button"> В корзину
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 c-product-list__item">
+                        <div class="align-items-center c-product-card_left-control c-product-card c-product-card_lg c-product-card_bordered c-product-card_events">
+                            <div class="c-checkbox-primary">
+                                <input class="c-checkbox c-checkbox_primary" id="example-checkbox"
+                                       type="checkbox">
+                                <label class="c-label mb-0" for="example-checkbox"></label>
+                            </div>
+                            <a class="c-product-card__preview" href="#">
+                                <img alt="" src="images/cupboard.png">
+                            </a>
+                            <div class="c-product-card__body">
+                                <div class="c-product-card__description">
+                                    <div class="c-product-desc">
+                                        <a class="c-product-desc__text c-product-desc__item" href="#"> 19"
+                                            Напольный
+                                            серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе,
+                                            двери
+                                            передняя перфорированная, задние двойные перфорированные, боковые
+                                            стенки,
+                                            регулируемые опоры, ролики, RAL 9005 </a>
+                                        <div class="c-product-desc__articul c-product-desc__item">
+                                            343423426524345
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="c-product-card__controls">
+                                    <div class="c-product-controls">
+                                        <div class="c-product-controls__body">
+                                            <div class="c-product-controls__counter c-input-counter">
+                                                <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
+                                                       type="text" value="1">
+                                                <button class="c-input-counter__left-ctrl" type="button">-
+                                                </button>
+                                                <button class="c-input-counter__right-ctrl" type="button">+
+                                                </button>
+                                            </div>
+                                            <button class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                                    href="#" type="button"> В корзину
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 c-product-list__item">
+                        <div class="align-items-center c-product-card_left-control c-product-card c-product-card_lg c-product-card_bordered c-product-card_events">
+                            <div class="c-checkbox-primary">
+                                <input class="c-checkbox c-checkbox_primary" id="example-checkbox"
+                                       type="checkbox">
+                                <label class="c-label mb-0" for="example-checkbox"></label>
+                            </div>
+                            <a class="c-product-card__preview" href="#">
+                                <img alt="" src="images/cupboard.png">
+                            </a>
+                            <div class="c-product-card__body">
+                                <div class="c-product-card__description">
+                                    <div class="c-product-desc">
+                                        <a class="c-product-desc__text c-product-desc__item" href="#"> 19"
+                                            Напольный
+                                            серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе,
+                                            двери
+                                            передняя перфорированная, задние двойные перфорированные, боковые
+                                            стенки,
+                                            регулируемые опоры, ролики, RAL 9005 </a>
+                                        <div class="c-product-desc__articul c-product-desc__item">
+                                            343423426524345
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="c-product-card__controls">
+                                    <div class="c-product-controls">
+                                        <div class="c-product-controls__body">
+                                            <div class="c-product-controls__counter c-input-counter">
+                                                <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
+                                                       type="text" value="1">
+                                                <button class="c-input-counter__left-ctrl" type="button">-
+                                                </button>
+                                                <button class="c-input-counter__right-ctrl" type="button">+
+                                                </button>
+                                            </div>
+                                            <button class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                                    href="#" type="button"> В корзину
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-6 c-product-list__item">
+                        <div class="align-items-center c-product-card_left-control c-product-card c-product-card_lg c-product-card_bordered c-product-card_events">
+                            <div class="c-checkbox-primary">
+                                <input class="c-checkbox c-checkbox_primary" id="example-checkbox"
+                                       type="checkbox">
+                                <label class="c-label mb-0" for="example-checkbox"></label>
+                            </div>
+                            <a class="c-product-card__preview" href="#">
+                                <img alt="" src="images/cupboard.png">
+                            </a>
+                            <div class="c-product-card__body">
+                                <div class="c-product-card__description">
+                                    <div class="c-product-desc">
+                                        <a class="c-product-desc__text c-product-desc__item" href="#"> 19"
+                                            Напольный
+                                            серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе,
+                                            двери
+                                            передняя перфорированная, задние двойные перфорированные, боковые
+                                            стенки,
+                                            регулируемые опоры, ролики, RAL 9005 </a>
+                                        <div class="c-product-desc__articul c-product-desc__item">
+                                            343423426524345
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="c-product-card__controls">
+                                    <div class="c-product-controls">
+                                        <div class="c-product-controls__body">
+                                            <div class="c-product-controls__counter c-input-counter">
+                                                <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
+                                                       type="text" value="1">
+                                                <button class="c-input-counter__left-ctrl" type="button">-
+                                                </button>
+                                                <button class="c-input-counter__right-ctrl" type="button">+
+                                                </button>
                                             </div>
                                             <button class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
                                                     href="#" type="button"> В корзину
@@ -178,118 +285,11 @@
                 </div>
             </div>
         </div>
-    </div>
-
-</div>
-<footer class="c-footer c-section-xs c-bg-primary">
-    <div class="container">
-        <div class="row">
-            <form action="#" class="c-subscribe-form mb-5">
-                <span class="c-subscribe-form__title">Подпишитесь на рассылку и будьте в курсе новый акций и скидок</span>
-                <input class="c-subscribe-form__input c-input c-input_style-default c-input_md c-input_color-primary"
-                       required type="email">
-                <button class="c-subscribe-form__submit c-btn c-btn_style-default c-btn_color-primary c-btn_md"
-                        type="submit"> Подписаться
-                </button>
-            </form>
-            <div class="d-flex align-items-center justify-content-between">
-                <a class="c-footer__logo" href="index.html"><img alt="" src="images/logo.png"></a>
-                <div class="c-social">
-                    <a class="c-social__item" href="#">
-                        <svg fill="none" height="48" width="48" xmlns="http://www.w3.org/2000/svg">
-                            <rect fill="#82A4E8" height="48" rx="4" width="48"/>
-                            <path d="M38.5 15.8a4 4 0 0 0-2.6-3C33.5 12 24 12 24 12s-9.5 0-11.9.7a4 4 0 0 0-2.6 3c-.7 2.7-.7 8.3-.7 8.3s0 5.6.7 8.3a4 4 0 0 0 2.6 3c2.4.7 11.9.7 11.9.7s9.5 0 11.9-.7a4 4 0 0 0 2.6-3c.7-2.7.7-8.3.7-8.3s0-5.6-.7-8.2ZM21 29V18.9l8 5.1-8 5.1Z"
-                                  fill="#fff"/>
-                        </svg>
-                    </a>
-                    <a class="c-social__item" href="#">
-                        <svg fill="none" height="48" width="48" xmlns="http://www.w3.org/2000/svg">
-                            <rect fill="#82A4E8" height="48" rx="4" width="48"/>
-                            <path clip-rule="evenodd"
-                                  d="M39.3 16c.2-.8 0-1.3-1-1.3h-3.6c-.9 0-1.3.4-1.5 1 0 0-1.8 4.2-4.3 7-.8.8-1.2 1-1.7 1-.2 0-.5-.2-.5-1V16c0-.8-.3-1.2-1-1.2h-5.5c-.6 0-.9.4-.9.8 0 .8 1.3 1 1.4 3.3v5c0 1.2-.2 1.4-.6 1.4-1.2 0-4.1-4.3-5.8-9.2-.4-1-.7-1.3-1.6-1.3H9.2c-1 0-1.2.4-1.2 1 0 .8 1.2 5.4 5.5 11.3 3 4.1 7 6.3 10.7 6.3 2.2 0 2.5-.5 2.5-1.3v-3c0-1 .2-1.3 1-1.3.4 0 1.3.3 3.4 2.3 2.4 2.3 2.8 3.3 4.1 3.3h3.5c1 0 1.5-.5 1.2-1.4-.3-1-1.4-2.4-3-4-.7-1-2-2-2.3-2.5-.6-.7-.4-1 0-1.6 0 0 4.2-5.9 4.7-7.9Z"
-                                  fill="#fff"
-                                  fill-rule="evenodd"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="c-bottom-menu">
-                <div class="row">
-                    <div class="c-bottom-menu__group col-auto col-3">
-                        <ul class="bottom-menu__list">
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Продукты
-                                и
-                                решения</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Каталог
-                                продуктов</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Брошюры и
-                                буклеты</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Документация
-                                и материалы</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="c-bottom-menu__group col-auto col-3">
-                        <ul class="bottom-menu__list">
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link"
-                                                               href="#">Пользователям</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Гарантия</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Техническая
-                                поддержка</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Демонстрационная
-                                зона</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link"
-                                                               href="#">Прайс-листы</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link"
-                                                               href="#">Референс-лист</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Видео</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Где
-                                купить?</a></li>
-                        </ul>
-                    </div>
-                    <div class="c-bottom-menu__group col-auto col-3">
-                        <ul class="bottom-menu__list">
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Партнерам</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Защита в
-                                проекте</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Обучение и
-                                сертификация</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link"
-                                                               href="#">Авторизация</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Системная
-                                гарантия</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Техническая
-                                поддержка</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Дилерская
-                                программа</a></li>
-                        </ul>
-                    </div>
-                    <div class="c-bottom-menu__group col-auto col-3">
-                        <ul class="bottom-menu__list">
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Компания</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Новости</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">О компнии</a>
-                            </li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link" href="#">Инженерно-технический
-                                центр</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link"
-                                                               href="#">Производство</a></li>
-                            <li class="c-bottom-menu__item"><a class="c-bottom-menu__link c-link"
-                                                               href="#">Контакты</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="c-added-basket-section__footer">
+            <button class="c-btn c-btn_style-default c-btn_color-light c-btn_lg" type="reset">Продолжить покупки</button>
         </div>
     </div>
-</footer>
+</div>
 </body>
 
 <script src="js/jquery.js"></script>
