@@ -45,7 +45,7 @@ $(document).ready(function () {
     })
     $(document).mouseup(function (e) {
         const form = $('[data-search-form]');
-        if(form.length){
+        if (form.length) {
             if (!form.is(e.target) && form.has(e.target).length === 0) {
                 form.addClass('d-none').find('form').get(0).reset();
             }
@@ -171,7 +171,9 @@ $(document).ready(function () {
     $('.c-popup').magnificPopup({
         tClose: 'Закрыть'
     });
-
+    $(document).on('click', '.modal-close', function () {
+        $.magnificPopup.close()
+    })
     routHelper([
         'authorization',
         'registration',
