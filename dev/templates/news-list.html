@@ -136,11 +136,15 @@
 <div class="container">
     <h1 class="c-title c-title_lg c-title_main">Новости</h1>
     <div class="c-content c-content_default">
-        <div class="c-tabs c-tabs_default">
-            <button class="c-tabs__link c-tabs__link-active c-btn  c-btn_lg" type="submit"> Новости</button>
-            <button class="c-tabs__link c-btn  c-btn_lg" type="submit"> Полезное</button>
-        </div>
-        <div data-ajax-news-container class="c-news-list row">
+        <ul class="c-tabs-list c-tabs-list_news row">
+            <li class="c-tabs-list__item col-auto">
+                <a class="c-tabs-link c-tabs-link_default c-tabs-link_active c-btn  c-btn_md" href="#"> Новости</a>
+            </li>
+            <li class="c-tabs-list__item col-auto">
+                <a class="c-tabs-link c-tabs-link_default c-btn  c-btn_md" href="#"> Полезное</a>
+            </li>
+        </ul>
+        <div class="c-news-list row" data-ajax-news-container>
             <div class="c-news-list__item col-12 col-md-6 col-lg-4 col-xl-3">
                 <a class="c-news-card c-news-card_events" href="#">
                     <div class="c-news-card__preview"
@@ -251,7 +255,9 @@
             </div>
         </div>
         <div class="d-flex justify-content-center mt-4">
-            <button data-ajax-news-btn type="button" class="c-btn c-btn_md c-btn_style-ghost c-btn_color-primary w-auto">Показать еще</button>
+            <button class="c-btn c-btn_sm c-btn_style-underline c-btn_color-primary c-btn_color-primary w-auto" data-ajax-news-btn
+                    type="button">Показать еще
+            </button>
         </div>
     </div>
 </div>

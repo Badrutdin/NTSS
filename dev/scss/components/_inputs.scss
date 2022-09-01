@@ -140,7 +140,6 @@
 .c-checkbox-primary .c-checkbox:checked + .c-label::before {
   border-color: $color-primary;
   border-width: 8px;
-  background-image: url("");
 }
 
 /*disabled */
@@ -148,6 +147,9 @@
   color: #C0CBD7;
 }
 
+.c-checkbox-primary.c-checkbox-primary_default .c-checkbox + .c-label::before {
+  margin-right: 14px;
+}
 .c-checkbox-primary .c-checkbox:disabled + .c-label::before {
   background-color: rgba($color-dark,.2) ;
   border-color: $color-dark;

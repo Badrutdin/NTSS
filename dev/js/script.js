@@ -45,9 +45,12 @@ $(document).ready(function () {
     })
     $(document).mouseup(function (e) {
         const form = $('[data-search-form]');
-        if (!form.is(e.target) && form.has(e.target).length === 0) {
-            form.addClass('d-none').find('form').get(0).reset();
+        if(form.length){
+            if (!form.is(e.target) && form.has(e.target).length === 0) {
+                form.addClass('d-none').find('form').get(0).reset();
+            }
         }
+
     });
     $('[data-search-trigger]').on('click', function () {
         $('[data-search-form]').removeClass('d-none').find('.c-input').focus();
@@ -165,6 +168,9 @@ $(document).ready(function () {
     $(document).on('click', '.modal-close', function () {
         $.magnificPopup.close()
     })
+    $('.c-popup').magnificPopup({
+        tClose: 'Закрыть'
+    });
 
     routHelper([
         'authorization',

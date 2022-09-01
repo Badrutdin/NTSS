@@ -136,15 +136,28 @@
 <div class="container">
     <h1 class="c-title c-title_lg c-title_main">Личный кабинет</h1>
     <div class="c-content c-content_default">
-        <div class="c-tabs c-tabs_ghost">
-            <a class="c-tabs__link" href="#">Спецификации</a>
-            <a class="c-tabs__link c-tabs__link-active" href="#">Мои данные</a>
+        <div class="align-items-baseline justify-content-between row">
+            <div class="col-auto">
+                <ul class="c-tabs-list c-tabs-list_personal row">
+                    <li class="c-tabs-list__item col-auto">
+                        <a class="c-tabs-link c-tabs-link_ghost c-btn  c-btn_md c-btn_style-underline c-btn_color-primary" href="#"> Спецификации</a>
+                    </li>
+                    <li class="c-tabs-list__item col-auto">
+                        <a class="c-tabs-link c-tabs-link_ghost  c-btn  c-btn_active c-btn_md c-btn_style-underline c-btn_color-primary" href="#"> Мои данные</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <a href="#" class="c-btn c-btn_sm c-btn_style-underline c-btn_color-primary c-btn_color-primary w-auto"
+                        >Выйти из кабинета
+                </a>
+            </div>
         </div>
         <form action="#">
             <div class="row">
                 <div class="col-12 col-xl-6 mb-3 mb-xl-0">
-                    <div class="c-lk-list">
-                        <div class="c-lk-list__item">
+                    <div class="c-personal-list">
+                        <div class="c-personal-list__item">
                             <label class="c-label" for="full-name">ФИО
                             </label>
                             <input
@@ -152,7 +165,7 @@
                                     id="full-name" placeholder="Константин Константинопольский" required="" type="text"
                                     value="Константин Константинопольский">
                         </div>
-                        <div class="c-lk-list__item">
+                        <div class="c-personal-list__item">
                             <label class="c-label" for="email">E-mail
                             </label>
                             <input
@@ -160,7 +173,7 @@
                                     id="email" placeholder="username@sitename.ru" required="" type="email"
                                     value="username@sitename.ru">
                         </div>
-                        <div class="c-lk-list__item">
+                        <div class="c-personal-list__item">
                             <label class="c-label" for="address">Адрес для доставки
                             </label>
                             <input
@@ -170,7 +183,7 @@
                                     type="text"
                                     value="123456, г. Москва, ул. Горького, д. 1, стр. 2, офис 3">
                         </div>
-                        <div class="c-lk-list__item">
+                        <div class="c-personal-list__item">
                             <label class="c-label" for="comment">Комментарий
                             </label>
                             <textarea
@@ -178,8 +191,8 @@
                                     id="comment" name="comment" placeholder="Введите свой комментарий"
                                     rows="10"></textarea>
                         </div>
-                        <div class="c-lk-list__item">
-                            <div class="c-checkbox-primary">
+                        <div class="c-personal-list__item">
+                            <div class="c-checkbox-primary c-checkbox-primary_default">
                                 <input class="c-checkbox c-checkbox_primary" id="example-checkbox" type="checkbox">
                                 <label class="c-label" for="example-checkbox">Получать рассылку</label>
                             </div>
@@ -187,8 +200,8 @@
                     </div>
                 </div>
                 <div class="col-12 col-xl-6">
-                    <div class="c-lk-list">
-                        <div class="c-lk-list__item">
+                    <div class="c-personal-list">
+                        <div class="c-personal-list__item">
                             <label class="c-label" for="phone">Телефон
                             </label>
                             <input
@@ -196,7 +209,7 @@
                                     id="phone" placeholder="+7 999 123 23 45" required="" type="tel"
                                     value="+79991232345">
                         </div>
-                        <div class="c-lk-list__item">
+                        <div class="c-personal-list__item">
                             <label class="c-label" for="company">Компания
                             </label>
                             <input
