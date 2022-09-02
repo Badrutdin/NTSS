@@ -24,8 +24,75 @@ function acc($target, activeClass) {
         });
     }
 }
-
+function counterHandler($input, $plus, $minus, min = 1, max = 99, step = 1) {
+    $plus.on('click', function () {
+        const curentValue = parseInt($input.val())
+        const nextValue = parseInt(curentValue + step)
+        if (nextValue <= max) {
+            $input.val(nextValue)
+                $input.trigger('change')
+        }
+    })
+    $minus.on('click', function () {
+        const curentValue = parseInt($input.val())
+        const nextValue = parseInt(curentValue - step)
+        if (nextValue >= min) {
+            $input.val(nextValue)
+            $input.trigger('change')
+        }
+    })
+}
+function replaceInputValue(value, $targetInput) {
+    $targetInput.val(value)
+}
 $(document).ready(function () {
+    const $counter = $('[data-counter]')
+    const $counterInput = $('[data-counter]').find('[data-counter-input]')
+    const $plus = $('[data-counter]').find('[data-counter-plus]')
+    const $minus = $('[data-counter]').find('[data-counter-minus]')
+    counterHandler($counterInput,$plus,$minus)
+
+
+
+    $('.c-product-controls__basket').magnificPopup({
+        tClose: 'Закрыть',
+        callbacks: {
+            open: function () {
+                const magnificPopup = $.magnificPopup.instance;
+                const content = magnificPopup.content.get(0);
+                const clickedEl = this.currItem.el.get(0)
+                const $parent = $(clickedEl).closest('.c-product-card')
+                const count = $parent.find('.c-input-counter__input').val()
+                const $popupCounter = $(content).find('.c-input-counter__input')
+                const id = $parent.attr('data-id')
+                const $popupCardIdContainer = $(content).find('.c-product-desc__articul')
+                const $popupCardDescContainer = $(content).find('.c-product-desc__text')
+                $.ajax({
+                    url: "/ajax/products.json"
+                }).done(function (res) {
+                    $popupCounter.val(count)
+                    $popupCardIdContainer.html(res[id]['id'])
+                    $popupCardDescContainer.html(res[id]['desc'])
+                })
+            },
+            close: function () {
+                const magnificPopup = $.magnificPopup.instance;
+                const content = magnificPopup.content.get(0);
+                const clickedEl = this.currItem.el.get(0)
+                const $parent = $(clickedEl).closest('.c-product-card')
+                const $popupCounter = $(content).find('.c-input-counter__input')
+                const $popupCardIdContainer = $(content).find('.c-product-desc__articul')
+                const $popupCardDescContainer = $(content).find('.c-product-desc__text')
+                $popupCardIdContainer.html('')
+                $popupCardDescContainer.html('')
+                $popupCounter.val(1)
+            }
+        }
+    });
+
+    $.each($('[data-ajax-form]'), function (l, v) {
+        formHandler($(v))
+    })
 
     $('[data-ajax-news-btn]').on('click', function () {
         $.ajax({
@@ -168,8 +235,21 @@ $(document).ready(function () {
     $(document).on('click', '.modal-close', function () {
         $.magnificPopup.close()
     })
-    $('.c-popup').magnificPopup({
-        tClose: 'Закрыть'
+    $('.price-request-popup').magnificPopup({
+        tClose: 'Закрыть',
+        callbacks: {
+            open: function () {
+                const magnificPopup = $.magnificPopup.instance;
+                const content = magnificPopup.content.get(0);
+                const clickedEl = this.currItem.el.get(0);
+                const $counterInput = $(content).find('[data-form-counter]')
+                const $counterHandler = $('[data-form-counter-handler]')
+                replaceInputValue($counterHandler.val(), $counterInput)
+                $counterHandler.on('change input', function (e) {
+                    replaceInputValue(e.target.value, $counterInput)
+                })
+            }
+        }
     });
     $(document).on('click', '.modal-close', function () {
         $.magnificPopup.close()
@@ -226,24 +306,118 @@ function renderInlineResult(resultContainer, resultMessage) {
     }, 3000);
 }
 
-function renderPopupResult(popupSelector, titleAttr = false, responseTitle = false) {
-    let popup = document.querySelector(popupSelector);
-    if (popup) {
-        if (titleAttr) {
-            let titleEl = popup.querySelector(`[${titleAttr}]`);
-            let title = $(titleEl).attr(titleAttr)
-            if (responseTitle) {
-                title = responseTitle;
-            }
-            titleEl.innerHTML = title;
-        }
 
-        $.magnificPopup.open({
-            items: {
-                src: popup,
-                type: 'inline'
+function getFormData(el) {
+    let data = {};
+    let inputs = el.querySelectorAll('input, select, textarea');
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].name != 'undefined' && inputs[i].name != '' && inputs[i].name) {
+            if (['checkbox', 'radio'].indexOf(inputs[i].type) > -1) {
+                if (inputs[i].checked) {
+                    data[inputs[i].name] = inputs[i].value;
+                }
+            } else {
+                data[inputs[i].name] = inputs[i].value;
             }
+        }
+    }
+    return data;
+}
+
+class renderResponseMessage {
+    constructor(displayContainer, styleParams = {
+        default: '',
+        success: '',
+        error: '',
+        warning: '',
+        text: ''
+    }) {
+        this.displayContainer = displayContainer;
+        this.styleParams = styleParams;
+        this.removeDelay = 3000
+    }
+
+    renderSuccess(messageText) {
+        const $message = $('<div>', {
+            class: `${this.styleParams.text}`
         });
+        const $messageContainer = $('<div>', {
+            class: `${this.styleParams.default} ${this.styleParams.success}`
+        })
+        $message.html(messageText);
+        $messageContainer.append($message)
+        this.displayContainer.append($messageContainer)
+        setTimeout(function () {
+            $messageContainer.remove()
+        }, this.removeDelay)
+    }
+
+    renderError(messageText) {
+        const $message = $('<div>', {
+            class: `${this.styleParams.text}`
+        });
+        const $messageContainer = $('<div>', {
+            class: `${this.styleParams.default} ${this.styleParams.error}`
+        })
+        $message.html(messageText);
+        $messageContainer.append($message)
+        this.displayContainer.append($messageContainer)
+        setTimeout(function () {
+            $messageContainer.remove()
+        }, this.removeDelay)
+    }
+
+    renderWarning(messageText) {
+        const $message = $('<div>', {
+            class: `${this.styleParams.text}`
+        });
+        const $messageContainer = $('<div>', {
+            class: `${this.styleParams.default} ${this.styleParams.warning}`
+        })
+        $message.html(messageText);
+        $messageContainer.append($message)
+        this.displayContainer.append($messageContainer)
+        setTimeout(function () {
+            $messageContainer.remove()
+        }, this.removeDelay)
     }
 }
+
+
+function formHandler($form, errorMessage = false) {
+    $form.on('submit', function (e) {
+        e.preventDefault()
+        const $target = $(e.target)
+        const data = getFormData(e.target)
+        const url = $target.attr('action')
+        const method = $target.attr('method')
+        const submit = $form.find('[type="submit"]')
+        const renderMess = new renderResponseMessage($form.find('.c-form__header'), {
+            default: 'c-alert',
+            success: 'c-alert_success',
+            error: 'c-alert_error',
+            warning: 'c-alert_warning',
+            text: 'c-title c-title_sm text-center'
+        })
+        submit.attr('disabled', true)
+        $.ajax({
+            url: 'http://localhost:3000/authorization',
+            method: method,
+            data: data
+        }).done(function () {
+            submit.attr('disabled', false)
+            $form.get(0).reset()
+            renderMess.renderSuccess('success')
+        }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
+            submit.attr('disabled', false)
+            let message;
+            message = "Error: " + XMLHttpRequest.responseText + " " + errorThrown + ".<br> Code: " + XMLHttpRequest.status
+            if (errorMessage) {
+                message = errorMessage
+            }
+            renderMess.renderError(message)
+        })
+    })
+}
+
 

@@ -14,13 +14,13 @@
 <div class="c-content c-content_form-page">
     <div class="container">
 
-        <div class="c-modal mfp-hide" id="popup-form">
+        <div class="c-modal mfp-hide" id="price-request-popup-form">
             <button class="mfp-close modal-close">
                 <svg fill="none" height="30" width="30" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="images/svg.svg#modal-close" xmlns="http://www.w3.org/1999/xlink"></use>
                 </svg>
             </button>
-            <form action="#" class="c-form">
+            <form action="#" class="c-form" data-ajax-form>
                 <div class="c-form__header">
                     <h2 class="c-form__title mb-3">
                         Узнать цену
@@ -48,11 +48,11 @@
                             <div class="c-product-card__controls">
                                 <div class="c-product-controls c-product-controls_counter-lg">
                                     <div class="c-product-controls__body">
-                                        <div class="c-product-controls__counter c-input-counter">
+                                        <div class="c-product-controls__counter c-input-counter" data-counter>
                                             <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
-                                                   type="text" value="1">
-                                            <button class="c-input-counter__left-ctrl" type="button">-</button>
-                                            <button class="c-input-counter__right-ctrl" type="button">+</button>
+                                                   type="number" value="1" data-form-counter-handler data-counter-input>
+                                            <button class="c-input-counter__left-ctrl" type="button" data-counter-minus>-</button>
+                                            <button class="c-input-counter__right-ctrl" type="button" data-counter-plus>+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -68,28 +68,33 @@
                         <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
                             <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
                                    id="name"
-                                   type="text">
+                                   name="name"
+                                   type="text"
+                            >
                             <label class="c-input-wrap__label" for="name"> Ваше имя</label>
                         </div>
                         <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
                             <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
-                                   id="phone" required type="tel">
+                                   id="phone" name="phone" required type="tel">
                             <label class="c-input-wrap__label" for="phone"> Телефон <span
                                     class="u-text-red">*</span></label>
                         </div>
                         <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
                             <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
-                                   id="email" type="email">
+                                   id="email" name="email" type="email">
                             <label class="c-input-wrap__label" for="email"> E-mail</label>
                         </div>
                         <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
                             <div class="c-checkbox-primary c-checkbox-primary_default">
-                                <input class="c-checkbox c-checkbox_primary" id="example-checkbox" required
-                                       type="checkbox">
-                                <label class="c-label" for="example-checkbox">Я соглашаюсь на обработку персональных
+                                <input class="c-checkbox c-checkbox_primary" id="policy" name="policy"
+                                       required
+                                       type="checkbox"
+                                >
+                                <label class="c-label" for="policy">Я соглашаюсь на обработку персональных
                                     данных</label>
                             </div>
                         </div>
+                        <input type="hidden" name="count" id="count" data-form-counter>
                     </div>
                     <div class="c-form__controls">
                         <button class="c-form__control c-btn c-btn_style-default c-btn_color-primary c-btn_lg"
@@ -101,7 +106,7 @@
             </form>
         </div>
 
-        <a class="c-product__img c-popup" href="#popup-form">POPUP</a>
+        <a class="c-product__img price-request-popup" href="#price-request-popup-form">POPUP</a>
 
     </div>
 </div>

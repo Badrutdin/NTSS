@@ -118,7 +118,7 @@
 </header>
 <div class="c-content c-content_form-page">
     <div class="container">
-        <form action="#" class="c-form">
+        <form action="ajax/handleTest.json" class="c-form" data-ajax-form>
             <div class="c-form__header">
                 <h2 class="c-form__title">
                     Вход в личный кабинет
@@ -129,17 +129,18 @@
                     <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
                         <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
                                id="login" required
+                               name="login"
                                type="text">
                         <label class="c-input-wrap__label" for="login"> Логин <span class="u-text-red">*</span> </label>
                     </div>
                     <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
                         <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
-                               id="password" required type="password">
+                               id="password" name="password" required type="password">
                         <label class="c-input-wrap__label" for="password"> Пароль <span class="u-text-red">*</span></label>
                     </div>
                 </div>
                 <div class="c-form__controls">
-                    <button class="c-form__control c-btn c-btn_style-default c-btn_color-primary c-btn_lg" type="submit">
+                    <button class="c-form__control c-btn c-btn_style-default c-btn_color-primary c-btn_lg " type="submit">
                         Войти
                     </button>
                 </div>

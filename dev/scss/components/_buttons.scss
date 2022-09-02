@@ -152,3 +152,11 @@
     color: $color-lightest;
   }
 }
+
+.c-btn:disabled{
+  &, &:hover,&:focus{
+    background-color: $color-dark;
+    color: $color-lightest;
+    cursor: default;
+  }
+}
