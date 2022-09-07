@@ -131,8 +131,8 @@
                                                 <button class="c-input-counter__right-ctrl" type="button">+
                                                 </button>
                                             </div>
-                                            <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                               href="#" type="button"> В корзину
+                                            <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                               href="#"> В корзину
                                             </a>
                                         </div>
 
@@ -178,8 +178,8 @@
                                                 <button class="c-input-counter__right-ctrl" type="button">+
                                                 </button>
                                             </div>
-                                            <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                               href="#" type="button"> В корзину
+                                            <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                               href="#"> В корзину
                                             </a>
                                         </div>
 
@@ -225,8 +225,8 @@
                                                 <button class="c-input-counter__right-ctrl" type="button">+
                                                 </button>
                                             </div>
-                                            <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                               href="#" type="button"> В корзину
+                                            <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                               href="#"> В корзину
                                             </a>
                                         </div>
 
@@ -272,8 +272,8 @@
                                                 <button class="c-input-counter__right-ctrl" type="button">+
                                                 </button>
                                             </div>
-                                            <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                               href="#" type="button"> В корзину
+                                            <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                               > В корзину
                                             </a>
                                         </div>
 
@@ -290,6 +290,97 @@
             </button>
         </div>
     </div>
+</div>
+<div class="c-modal mfp-hide" id="price-request-popup-form">
+    <button class="mfp-close modal-close">
+        <svg fill="none" height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="images/svg.svg#modal-close" xmlns="http://www.w3.org/1999/xlink"></use>
+        </svg>
+    </button>
+    <form action="#" class="c-form" data-ajax-form>
+        <div class="c-form__header">
+            <h2 class="c-form__title mb-3">
+                Узнать цену
+            </h2>
+            <div class="align-items-center c-product-card_left-control c-product-card_card-added c-product-card_request-price c-product-card c-product-card_bordered c-product-card_lg ">
+                <div class="c-checkbox-primary">
+                    <input class="c-checkbox c-checkbox_primary" id="example-checkbox" type="checkbox">
+                    <label class="c-label mb-0" for="example-checkbox"></label>
+                </div>
+                <a class="c-product-card__preview" href="#">
+                    <img alt="" src="images/cupboard.png">
+                </a>
+                <div class="c-product-card__body">
+                    <div class="c-product-card__description">
+                        <div class="c-product-desc">
+                            <a class="c-product-desc__text c-product-desc__item" href="#">19" Напольный
+                                серверный
+                                шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе, двери передняя
+                                перфорированная, задние двойные перфорированные, боковые стенки, регулируемые
+                                опоры,
+                                ролики, RAL 9005</a>
+                            <div class="c-product-desc__articul c-product-desc__item"> 343423426524345</div>
+                        </div>
+                    </div>
+                    <div class="c-product-card__controls">
+                        <div class="c-product-controls c-product-controls_counter-lg">
+                            <div class="c-product-controls__body">
+                                <div class="c-product-controls__counter c-input-counter" data-counter>
+                                    <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
+                                           type="number" value="1" data-form-counter-handler data-counter-input>
+                                    <button class="c-input-counter__left-ctrl" type="button" data-counter-minus>-</button>
+                                    <button class="c-input-counter__right-ctrl" type="button" data-counter-plus>+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-form__body">
+            <div class="mb-3 w-100 text-center">
+                Оставьте свои контактные данные и наш менеджер свяжется с Вами в ближайшее время
+            </div>
+            <div class="c-form__fields">
+                <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
+                    <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
+                           id="name"
+                           name="name"
+                           type="text"
+                    >
+                    <label class="c-input-wrap__label" for="name"> Ваше имя</label>
+                </div>
+                <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
+                    <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
+                           id="phone" name="phone" required type="tel">
+                    <label class="c-input-wrap__label" for="phone"> Телефон <span
+                            class="u-text-red">*</span></label>
+                </div>
+                <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
+                    <input class="w-100 c-input-wrap__input c-input c-input_style-default c-input_lg c-input_color-primary"
+                           id="email" name="email" type="email">
+                    <label class="c-input-wrap__label" for="email"> E-mail</label>
+                </div>
+                <div class="c-form__field c-input-wrap c-input-wrap_lg c-input-wrap_anim-label">
+                    <div class="c-checkbox-primary c-checkbox-primary_default">
+                        <input class="c-checkbox c-checkbox_primary" id="policy" name="policy"
+                               required
+                               type="checkbox"
+                        >
+                        <label class="c-label" for="policy">Я соглашаюсь на обработку персональных
+                            данных</label>
+                    </div>
+                </div>
+                <input type="hidden" name="count" id="count" data-form-counter>
+            </div>
+            <div class="c-form__controls">
+                <button class="c-form__control c-btn c-btn_style-default c-btn_color-primary c-btn_lg"
+                        type="submit">
+                    Узнать цену
+                </button>
+            </div>
+        </div>
+    </form>
 </div>
 
 <header class="c-header">
@@ -699,9 +790,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -772,9 +862,79 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
+                                        </a>
+                                    </div>
+                                    <div class="c-product-controls__footer">
+                                        <button class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
+                                                href="#"
+                                                type="button"> Купить в один клик
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-product-list__item col-auto">
+                        <div class="c-product-card c-product-card_md c-product-card_events">
+                            <div class="c-product-card__actions c-icon-list">
+                                <div class="c-icon-list__item">
+                                    <button class="c-btn c-btn_product-action" type="button">
+                                        <svg fill="none" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="images/svg.svg#comparisons"
+                                                 xmlns="http://www.w3.org/1999/xlink"></use>
+
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="c-icon-list__item">
+                                    <button class="c-btn c-btn_product-action" type="button">
+                                        <svg fill="none" height="20" width="22" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="images/svg.svg#favorite"
+                                                 xmlns="http://www.w3.org/1999/xlink"></use>
+
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="c-icon-list__item">
+                                    <button class="c-btn c-btn_product-action" type="button">
+                                        <svg fill="none" height="16" width="22" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="images/svg.svg#eye"
+                                                 xmlns="http://www.w3.org/1999/xlink"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <a class="c-product-card__preview" href="#">
+                                <img alt="" src="images/cupboard.png">
+                            </a>
+                            <div class="c-product-card__description">
+                                <div class="c-product-desc">
+                                    <a class="c-product-desc__text c-product-desc__item" href="#"> 19" Напольный
+                                        серверный
+                                        шкаф
+                                        NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе, две dljsfhkdwhsfhdslfhsdl;f
+                                    </a>
+                                    <div class="c-product-desc__articul c-product-desc__item"> 343423426524345</div>
+                                    <div class="c-product-desc__price c-product-desc__item">
+                                        <div class="c-product-price">
+                                            <span class="c-product-price__item">Цена по запросу</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-product-card__controls">
+                                <div class="c-product-controls">
+                                    <div class="c-product-controls__body">
+                                        <div class="c-product-controls__counter c-input-counter">
+                                            <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
+                                                   type="text" value="1">
+                                            <button class="c-input-counter__left-ctrl" type="button">-</button>
+                                            <button class="c-input-counter__right-ctrl" type="button">+</button>
+                                        </div>
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#price-request-popup-form"> Узнать цену
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -845,9 +1005,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -918,9 +1077,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -991,9 +1149,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1064,9 +1221,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1137,9 +1293,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1210,9 +1365,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1283,9 +1437,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1356,9 +1509,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1429,9 +1581,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1502,9 +1653,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1575,9 +1725,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">
@@ -1648,82 +1797,8 @@
                                             <button class="c-input-counter__left-ctrl" type="button">-</button>
                                             <button class="c-input-counter__right-ctrl" type="button">+</button>
                                         </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
-                                        </a>
-                                    </div>
-                                    <div class="c-product-controls__footer">
-                                        <button class="c-product-controls__buy c-btn c-btn_style-default c-btn_color-light c-btn_sm"
-                                                href="#"
-                                                type="button"> Купить в один клик
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="c-product-list__item col-auto">
-                        <div class="c-product-card c-product-card_md c-product-card_events">
-                            <div class="c-product-card__actions c-icon-list">
-                                <div class="c-icon-list__item">
-                                    <button class="c-btn c-btn_product-action" type="button">
-                                        <svg fill="none" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="images/svg.svg#comparisons"
-                                                 xmlns="http://www.w3.org/1999/xlink"></use>
-
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="c-icon-list__item">
-                                    <button class="c-btn c-btn_product-action" type="button">
-                                        <svg fill="none" height="20" width="22" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="images/svg.svg#favorite"
-                                                 xmlns="http://www.w3.org/1999/xlink"></use>
-
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="c-icon-list__item">
-                                    <button class="c-btn c-btn_product-action" type="button">
-                                        <svg fill="none" height="16" width="22" xmlns="http://www.w3.org/2000/svg">
-                                            <use xlink:href="images/svg.svg#eye"
-                                                 xmlns="http://www.w3.org/1999/xlink"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <a class="c-product-card__preview" href="#">
-                                <img alt="" src="images/cupboard.png">
-                            </a>
-                            <div class="c-product-card__description">
-                                <div class="c-product-desc">
-                                    <a class="c-product-desc__text c-product-desc__item" href="#"> 19" Напольный
-                                        серверный
-                                        шкаф
-                                        NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе, две dljsfhkdwhsfhdslfhsdl;f
-                                    </a>
-                                    <div class="c-product-desc__articul c-product-desc__item"> 343423426524345</div>
-                                    <div class="c-product-desc__price c-product-desc__item">
-                                        <div class="c-product-price">
-                                            <span class="c-product-price__item">14 990 ₽</span>
-                                            <span class="c-product-price__item c-product-price__old">19 990 ₽</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="c-product-card__controls">
-                                <div class="c-product-controls">
-                                    <div class="c-product-controls__body">
-                                        <div class="c-product-controls__counter c-input-counter">
-                                            <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
-                                                   type="text" value="1">
-                                            <button class="c-input-counter__left-ctrl" type="button">-</button>
-                                            <button class="c-input-counter__right-ctrl" type="button">+</button>
-                                        </div>
-                                        <a class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
-                                           href="#popup-form"
-                                           type="button"> В корзину
+                                        <a data-basket-btn class="c-product-controls__basket c-btn c-btn_style-default c-btn_color-primary c-btn_sm"
+                                           href="#popup-form"> В корзину
                                         </a>
                                     </div>
                                     <div class="c-product-controls__footer">

@@ -39,6 +39,21 @@
   }
 }
 
+.c-btn_style-ghost {
+  background-color: transparent;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.c-btn_style-ghost.c-btn_color-primary {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  &:hover,&:focus{
+    background-color: $color-primary;
+    color: $color-lightest;
+  }
+}
+
 .c-btn_style-underline {
   background-color: transparent;
   border-bottom: 2px solid;
@@ -47,10 +62,12 @@
     border-radius: 0;
   }
 }
-.c-btn_style-underline.c-btn_active.c-btn_color-primary{
+
+.c-btn_style-underline.c-btn_active.c-btn_color-primary {
   color: $color-primary;
   border-color: $color-primary;
 }
+
 .c-btn_style-underline.c-btn_sm {
   height: 38px;
   font-size: 16px;
@@ -58,11 +75,12 @@
   padding-left: 0;
   padding-right: 0;
 }
+
 .c-btn_style-underline.c-btn_color-primary {
   color: $color-dark;
   border-color: $color-secondary;
 
-  &:hover, &:focus,  {
+  &:hover, &:focus, {
     color: $color-primary;
     border-color: $color-primary;
   }
@@ -126,7 +144,7 @@
 }
 
 .c-btn_pagination {
-  background-color: transparent;
+  background-color: $color-lighten;
   width: 60px;
   height: 60px;
   display: flex;
@@ -153,8 +171,8 @@
   }
 }
 
-.c-btn:disabled{
-  &, &:hover,&:focus{
+.c-btn:disabled {
+  &, &:hover, &:focus {
     background-color: $color-dark;
     color: $color-lightest;
     cursor: default;
