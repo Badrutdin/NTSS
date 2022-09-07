@@ -24,13 +24,14 @@ function acc($target, activeClass) {
         });
     }
 }
+
 function counterHandler($input, $plus, $minus, min = 1, max = 99, step = 1) {
     $plus.on('click', function () {
         const curentValue = parseInt($input.val())
         const nextValue = parseInt(curentValue + step)
         if (nextValue <= max) {
             $input.val(nextValue)
-                $input.trigger('change')
+            $input.trigger('change')
         }
     })
     $minus.on('click', function () {
@@ -42,16 +43,17 @@ function counterHandler($input, $plus, $minus, min = 1, max = 99, step = 1) {
         }
     })
 }
+
 function replaceInputValue(value, $targetInput) {
     $targetInput.val(value)
 }
+
 $(document).ready(function () {
     const $counter = $('[data-counter]')
     const $counterInput = $('[data-counter]').find('[data-counter-input]')
     const $plus = $('[data-counter]').find('[data-counter-plus]')
     const $minus = $('[data-counter]').find('[data-counter-minus]')
-    counterHandler($counterInput,$plus,$minus)
-
+    counterHandler($counterInput, $plus, $minus)
 
 
     $('.c-product-controls__basket').magnificPopup({
@@ -299,13 +301,6 @@ function routHelper(pages) {
     $('body').append(menuContainer)
 }
 
-function renderInlineResult(resultContainer, resultMessage) {
-    $(resultContainer).html(resultMessage);
-    setTimeout(function () {
-        resultContainer.innerHTML = '';
-    }, 3000);
-}
-
 
 function getFormData(el) {
     let data = {};
@@ -337,6 +332,15 @@ class renderResponseMessage {
         this.removeDelay = 3000
     }
 
+    render($message, $messageContainer, messageText) {
+        $message.html(messageText);
+        $messageContainer.append($message)
+        this.displayContainer.append($messageContainer)
+        setTimeout(function () {
+            $messageContainer.remove()
+        }, this.removeDelay)
+    }
+
     renderSuccess(messageText) {
         const $message = $('<div>', {
             class: `${this.styleParams.text}`
@@ -344,12 +348,7 @@ class renderResponseMessage {
         const $messageContainer = $('<div>', {
             class: `${this.styleParams.default} ${this.styleParams.success}`
         })
-        $message.html(messageText);
-        $messageContainer.append($message)
-        this.displayContainer.append($messageContainer)
-        setTimeout(function () {
-            $messageContainer.remove()
-        }, this.removeDelay)
+        this.render($message, $messageContainer, messageText)
     }
 
     renderError(messageText) {
@@ -359,12 +358,7 @@ class renderResponseMessage {
         const $messageContainer = $('<div>', {
             class: `${this.styleParams.default} ${this.styleParams.error}`
         })
-        $message.html(messageText);
-        $messageContainer.append($message)
-        this.displayContainer.append($messageContainer)
-        setTimeout(function () {
-            $messageContainer.remove()
-        }, this.removeDelay)
+        this.render($message, $messageContainer, messageText)
     }
 
     renderWarning(messageText) {
@@ -374,17 +368,25 @@ class renderResponseMessage {
         const $messageContainer = $('<div>', {
             class: `${this.styleParams.default} ${this.styleParams.warning}`
         })
-        $message.html(messageText);
-        $messageContainer.append($message)
-        this.displayContainer.append($messageContainer)
-        setTimeout(function () {
-            $messageContainer.remove()
-        }, this.removeDelay)
+        this.render($message, $messageContainer, messageText)
     }
 }
 
 
-function formHandler($form, errorMessage = false) {
+function formHandler($form, parameters = {}) {
+    const params = {
+        errorMessage: parameters.errorMessage || false,
+        successMessage: parameters.successMessage || false,
+        beforeRequest: parameters.beforeRequest || function () {
+            console.log('before')
+        },
+        onSuccess: parameters.onSuccess || function () {
+            console.log('success')
+        },
+        onError: parameters.onError || function () {
+            console.log('error')
+        }
+    }
     $form.on('submit', function (e) {
         e.preventDefault()
         const $target = $(e.target)
@@ -400,22 +402,32 @@ function formHandler($form, errorMessage = false) {
             text: 'c-title c-title_sm text-center'
         })
         submit.attr('disabled', true)
+        params.beforeRequest()
         $.ajax({
-            url: 'http://localhost:3000/authorization',
-            method: method,
-            data: data
+            url,
+            method,
+            data
         }).done(function () {
-            submit.attr('disabled', false)
             $form.get(0).reset()
-            renderMess.renderSuccess('success')
+            submit.attr('disabled', false)
+            let message;
+            if (params.successMessage) {
+                message = params.successMessage
+            } else {
+                message = 'Форма успешно отправлена'
+            }
+            renderMess.renderSuccess(message)
+            params.onSuccess()
         }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
             submit.attr('disabled', false)
             let message;
-            message = "Error: " + XMLHttpRequest.responseText + " " + errorThrown + ".<br> Code: " + XMLHttpRequest.status
-            if (errorMessage) {
-                message = errorMessage
+            if (params.errorMessage) {
+                message = params.errorMessage
+            } else {
+                message = "Error: " + XMLHttpRequest.responseText + " " + errorThrown + ".<br> Code: " + XMLHttpRequest.status
             }
             renderMess.renderError(message)
+            params.onError()
         })
     })
 }
