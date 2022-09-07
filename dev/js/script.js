@@ -385,6 +385,9 @@ function formHandler($form, parameters = {}) {
         },
         onError: parameters.onError || function () {
             console.log('error')
+        },
+        afterRequest: parameters.afterRequest || function () {
+            console.log('after')
         }
     }
     $form.on('submit', function (e) {
@@ -428,6 +431,8 @@ function formHandler($form, parameters = {}) {
             }
             renderMess.renderError(message)
             params.onError()
+        }).always(function () {
+            params.afterRequest()
         })
     })
 }
