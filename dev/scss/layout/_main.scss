@@ -1135,3 +1135,14 @@ body {
     padding-bottom: 10px;
   }
 }
+
+.c-shopping-cart{
+  &__list{
+    border: 1px solid $color-lighten;
+
+
+  }
+  &__footer{
+    margin-top: 30px;
+  }
+}

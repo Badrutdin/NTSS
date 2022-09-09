@@ -50,9 +50,13 @@
                                     <div class="c-product-controls__body">
                                         <div class="c-product-controls__counter c-input-counter" data-counter>
                                             <input class="c-input-counter__input c-input c-input_md c-input_style-secondary c-input_color-primary"
-                                                   type="number" value="1" data-form-counter-handler data-counter-input>
-                                            <button class="c-input-counter__left-ctrl" type="button" data-counter-minus>-</button>
-                                            <button class="c-input-counter__right-ctrl" type="button" data-counter-plus>+</button>
+                                                   data-counter-input data-form-counter-handler type="number" value="1">
+                                            <button class="c-input-counter__left-ctrl" data-counter-minus type="button">
+                                                -
+                                            </button>
+                                            <button class="c-input-counter__right-ctrl" data-counter-plus type="button">
+                                                +
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -94,7 +98,7 @@
                                     данных</label>
                             </div>
                         </div>
-                        <input type="hidden" name="count" id="count" data-form-counter>
+                        <input data-form-counter id="count" name="count" type="hidden">
                     </div>
                     <div class="c-form__controls">
                         <button class="c-form__control c-btn c-btn_style-default c-btn_color-primary c-btn_lg"

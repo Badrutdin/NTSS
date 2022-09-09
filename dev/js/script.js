@@ -65,10 +65,13 @@ $(document).ready(function () {
                 const clickedEl = this.currItem.el.get(0)
                 const $parent = $(clickedEl).closest('.c-product-card')
                 const count = $parent.find('.c-input-counter__input').val()
-                const $popupCounter = $(content).find('.c-input-counter__input')
+                const $popupCounter = $(content).find('.c-added-basket-section__main-product .c-input-counter__input')
                 const id = $parent.attr('data-id')
-                const $popupCardIdContainer = $(content).find('.c-product-desc__articul')
-                const $popupCardDescContainer = $(content).find('.c-product-desc__text')
+                const $popupCardIdContainer = $(content).find('.c-added-basket-section__main-product .c-product-desc__articul')
+                const $popupCardDescContainer = $(content).find('.c-added-basket-section__main-product .c-product-desc__text')
+                $popupCardIdContainer.html('')
+                $popupCardDescContainer.html('')
+                $popupCounter.val(1)
                 $.ajax({
                     url: "/ajax/products.json"
                 }).done(function (res) {
@@ -76,18 +79,6 @@ $(document).ready(function () {
                     $popupCardIdContainer.html(res['123']['id'])
                     $popupCardDescContainer.html(res['123']['desc'])
                 })
-            },
-            close: function () {
-                const magnificPopup = $.magnificPopup.instance;
-                const content = magnificPopup.content.get(0);
-                const clickedEl = this.currItem.el.get(0)
-                const $parent = $(clickedEl).closest('.c-product-card')
-                const $popupCounter = $(content).find('.c-input-counter__input')
-                const $popupCardIdContainer = $(content).find('.c-product-desc__articul')
-                const $popupCardDescContainer = $(content).find('.c-product-desc__text')
-                $popupCardIdContainer.html('')
-                $popupCardDescContainer.html('')
-                $popupCounter.val(1)
             }
         }
     });
