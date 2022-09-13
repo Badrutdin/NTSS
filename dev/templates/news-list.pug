@@ -1,0 +1,35 @@
+extends ../pug/layout
+append content
+    .container
+        h1.c-title.c-title_lg.c-title_main Новости
+        .c-content.c-content_default
+            ul.c-tabs-list.c-tabs-list_news.row
+                li.c-tabs-list__item.col-auto
+                    a.c-tabs-link.c-tabs-link_default.c-tabs-link_active.c-btn.c-btn_md(href='#') Новости
+                li.c-tabs-list__item.col-auto
+                    a.c-tabs-link.c-tabs-link_default.c-btn.c-btn_md(href='#')  Полезное
+            .c-news-list.row(data-ajax-news-container='')
+                +c-news-list__item('images/news-1.jpg')
+                +c-news-list__item('images/news-2.jpg')
+                +c-news-list__item('images/news-3.jpg')
+                +c-news-list__item('images/news-1.jpg')
+                +c-news-list__item('images/news-1.jpg')
+                +c-news-list__item('images/news-2.jpg')
+                +c-news-list__item('images/news-3.jpg')
+                +c-news-list__item('images/news-1.jpg')
+                +c-news-list__item('images/news-1.jpg')
+                +c-news-list__item('images/news-2.jpg')
+                +c-news-list__item('images/news-3.jpg')
+                +c-news-list__item('images/news-1.jpg')
+            .d-flex.justify-content-center.mt-4
+                button.c-btn.c-btn_sm.c-btn_style-underline.c-btn_color-primary.c-btn_color-primary.w-auto(data-ajax-news-btn='' type='button') Показать еще
+
+
+mixin c-news-list__item(imgPath)
+    .c-news-list__item.col-12.col-md-6.col-lg-4.col-xl-3
+        a.c-news-card.c-news-card_events(href='#')
+            .c-news-card__preview(style={'background-image':'url(' + imgPath + ')'})
+            .c-news-card__title Название новости, может быть в
+                br
+                |  несколько строк
+            .c-news-card__date 01.01.2022

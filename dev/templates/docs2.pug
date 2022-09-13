@@ -1,0 +1,32 @@
+extends ../pug/layout
+append content
+    .container
+        h1.c-title.c-title_lg.c-title_main Брошюры и буклеты
+        .c-content.c-content_default
+            .row.c-docs-list
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+                +c-docs-list__item()
+
+mixin c-docs-list__item()
+    .col-3.c-docs-list__item
+        a.c-doc-item.c-doc-item_default(download='' href='images/about-main-page.jpg' target='_blank')
+            span.c-doc-item__view
+            span.c-doc-item__props
+                span.c-doc-item__name Название файла для
+                    br
+                    |  скачивания
+                span.c-doc-item__size 1.3 Mb
+                    span.c-doc-item__icon
+                        svg(fill='none' height='24' width='24' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#download' xmlns='http://www.w3.org/1999/xlink')

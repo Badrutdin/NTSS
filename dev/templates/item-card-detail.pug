@@ -1,0 +1,116 @@
+extends ../pug/layout
+append content
+    .container
+        .row
+            .col-10
+                .c-section.c-section_md
+                    .c-section__header.c-header-detail Характеристики
+                    table.characters-table
+                        +characters-table__row-1({name: 'Высота', value: '22U'})
+                        +characters-table__row-1({name: 'Ширина', value: '600 мм'})
+                        +characters-table__row-1({name: 'Глубина', value: '1070 мм'})
+                        +characters-table__row-1({name: 'Задняя дверь', value: 'металлическая'})
+                        +characters-table__row-1({name: 'Боковые стенки', value: 'съёмные'})
+                        +characters-table__row-1({name: 'Тип конструкции', value: 'сборно/разборный'})
+                        +characters-table__row-1({name: 'Передняя дверь', value: 'стеклянная'})
+                        +characters-table__row-1({name: 'Цвет', value: 'чёрный'})
+                .c-section.c-section_md
+                    .c-section__header.c-header-detail Комплект поставки
+                    table.characters-table
+                        +characters-table__row-2({num: '№', name: 'Наименование', value: 'Количество, шт.'})
+                        +characters-table__row-2({num: '1', name: 'Винт с прессшайбой М6х10(12) (Zn)', value: '12'})
+                        +characters-table__row-2({num: '2', name: 'Винт с прессшайбой М6х16 (Zn)', value: '26'})
+                        +characters-table__row-2({num: '3', name: 'Гайка с фланцем М6 (Zn)', value: '12'})
+                        +characters-table__row-2({num: '4',name: 'Винт потай головка под шестигранник М6х14 (Чёрный)',value: '18'})
+                        +characters-table__row-2({num: '5', name: 'Комплект кабелей заземления', value: '4'})
+                        +characters-table__row-2({num: '6',name: 'Комплект крепежа вертикальных направляющих и органайзеров',value: '18'})
+                .c-section.c-section_md.c-files-section.c-files-section_cols-1
+                    .c-section__header.c-header-detail Технический паспорт
+                    .row.c-files-list
+                            .c-files-list__item.col-12
+                                +c-files-list__item({href:'images/about-main-page.jpg',icon:'images/svg.svg#pdf', value:'ПАСПОРТ НАПОЛЬНЫЙ СЕРВЕРНЫЙ ШКАФ NTSS СЕРИИ ПРОЦОД',size:'1.3 Mb'})
+                            .c-files-list__item.col-12
+                                +c-files-list__item({href:'images/about-main-page.jpg',icon:'images/svg.svg#pdf', value:'ПАСПОРТ НАПОЛЬНЫЙ СЕРВЕРНЫЙ ШКАФ NTSS СЕРИИ ПРОЦОД',size:'1.3 Mb'})
+                .c-section.c-section_md.c-files-section.c-files-section_cols-1
+                    .c-section__header.c-header-detail Сертификаты
+                    .row.c-files-list
+                            .c-files-list__item.col-12
+                                a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
+                            .c-files-list__item.col-12
+                                a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
+                            .c-files-list__item.col-12
+                                a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
+                .c-section.c-section_md
+                    .c-section__header.c-header-detail Видео
+                    .row
+                            .col-3
+                                .iframe-video.ratio.ratio-16x9(data-video-frame='')
+                                    img.iframe-preload(data-url='https://www.youtube.com/embed/AWKzr6n0ea0?autoplay=1' src='https://cdnn21.img.ria.ru/images/144814/13/1448141397_0:219:4256:2613_600x0_80_0_0_daca8ef930216c2914360b4561ec4c30.jpg')
+                                    .iframe-play(aria-label='Смотреть')
+                                        svg(height='100%' version='1.1' viewbox='0 0 68 48' width='100%')
+                                            path.iframe-play__button-bg(d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z' fill='#f00')
+                                            path(d='M 45,24 27,14 27,34' fill='#fff')
+
+                            .col-3
+                                .iframe-video.ratio.ratio-16x9(data-video-frame='')
+                                    img.iframe-preload(data-url='https://www.youtube.com/embed/AWKzr6n0ea0?autoplay=1' src='https://cdnn21.img.ria.ru/images/144814/13/1448141397_0:219:4256:2613_600x0_80_0_0_daca8ef930216c2914360b4561ec4c30.jpg')
+                                    .iframe-play(aria-label='Смотреть')
+                                        svg(height='100%' version='1.1' viewbox='0 0 68 48' width='100%')
+                                            path.iframe-play__button-bg(d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z' fill='#f00')
+                                            path(d='M 45,24 27,14 27,34' fill='#fff')
+
+                .c-specifications-section.mb-4.p-0
+                    .c-specifications-section__header
+                        .row.align-items-center.justify-content-between
+                            .col-auto
+                                h2.c-specifications-section__title Сопутствующие товары
+                            .col-auto
+                                a.c-btn.c-btn_sm.c-btn_style-underline.c-btn_color-primary.c-btn_color-primary.w-auto(href='#') Смотреть все
+                    .owl-carousel.c-slider.c-slider_h-100.c-products-slider(data-products-slider='2')
+                        +c-slider-item()
+                        +c-slider-item()
+                        +c-slider-item()
+                        +c-slider-item()
+                        +c-slider-item()
+                        +c-slider-item()
+                        +c-slider-item()
+            .col-2
+
+
+mixin characters-table__row-1(values)
+    tr.row.characters-table__row
+        td.col-8.characters-table__item= values.name
+        td.col-4.characters-table__item= values.value
+mixin characters-table__row-2(values)
+    tr.row.characters-table__row
+        td.col-8.characters-table__item
+            .row
+                .col-1= values.num
+                .col-11= values.name
+        td.col-4.characters-table__item= values.value
+
+mixin c-slider-item()
+    .c-slider__item
+        .c-product-card.c-product-card_md.c-product-card_events(data-id='123')
+            .c-product-card__actions.c-icon-list
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='18' width='18' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#comparisons' xmlns='http://www.w3.org/1999/xlink')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='20' width='22' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#favorite' xmlns='http://www.w3.org/1999/xlink')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='16' width='22' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#eye' xmlns='http://www.w3.org/1999/xlink')
+            a.c-product-card__preview(href='#')
+                img(alt='' src='images/cupboard.png')
+            .c-product-card__description
+                .c-product-desc
+                    a.c-product-desc__text.c-product-desc__item(href='#') Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу
+                    .c-product-desc__price.c-product-desc__item
+                        .c-product-price
+                            span.c-product-price__item 14 990 ₽
+                            span.c-product-price__item.c-product-price__old 19 990 ₽

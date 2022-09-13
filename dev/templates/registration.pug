@@ -1,0 +1,26 @@
+extends ../pug/layout
+append content
+    .c-content.c-content_form-page
+        .container
+            form.c-form(action='#')
+                .c-form__header
+                    h2.c-form__title Регистрация
+                .c-form__body
+                    .c-form__fields
+                        .c-form__field.c-input-wrap.c-input-wrap_lg.c-input-wrap_anim-label
+                            input#login.w-100.c-input-wrap__input.c-input.c-input_style-default.c-input_lg.c-input_color-primary(required='' type='text')
+                            label.c-input-wrap__label(for='login') Логин
+                                span.u-text-red *
+                        .c-form__field.c-input-wrap.c-input-wrap_lg.c-input-wrap_anim-label
+                            input#password.w-100.c-input-wrap__input.c-input.c-input_style-default.c-input_lg.c-input_color-primary(required='' type='password')
+                            label.c-input-wrap__label(for='password') Пароль
+                                span.u-text-red *
+                        .c-form__field.c-input-wrap.c-input-wrap_lg.c-input-wrap_anim-label
+                            input#repeat_password.w-100.c-input-wrap__input.c-input.c-input_style-default.c-input_lg.c-input_color-primary(required='' type='password')
+                            label.c-input-wrap__label(for='repeat_password') Повторите пароль
+                                span.u-text-red *
+                    .c-form__controls
+                        button.c-form__control.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_lg(type='submit') Зарегистрироваться
+                .c-form__footer.text-center Уже зарегистрированы?
+                    a.c-link.c-link_events.d-inline-block(href='#')
+                        b авторизуйтесь

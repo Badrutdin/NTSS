@@ -1,0 +1,76 @@
+extends ../pug/layout
+append content
+    .container
+        +breadCrumbs({value:'Личный кабинет'})
+        h1.c-title.c-title_lg.c-title_main Личный кабинет
+        .c-content.c-content_default
+            .align-items-baseline.justify-content-between.row
+                .col-auto
+                    ul.c-tabs-list.c-tabs-list_personal.row
+                        li.c-tabs-list__item.col-auto
+                            a.c-tabs-link.c-tabs-link_ghost.c-btn.c-btn_active.c-btn_md.c-btn_style-underline.c-btn_color-primary(href='#')  Спецификации
+                        li.c-tabs-list__item.col-auto
+                            a.c-tabs-link.c-tabs-link_ghost.c-btn.c-btn_md.c-btn_style-underline.c-btn_color-primary(href='#') Мои данные
+                .col-auto
+                    a.c-btn.c-btn_sm.c-btn_style-underline.c-btn_color-primary.c-btn_color-primary.w-auto(href='#') Выйти из кабинета
+            .c-specifications-section.c-specifications-section_bordered
+                .c-specifications-section__header
+                    .row.align-items-center.justify-content-between
+                        .col-auto
+                            h2.c-specifications-section__title Название списка
+                        .col-auto
+                            .c-specifications-section__actions
+                                .c-specifications-section__action
+                                    button.c-btn.c-btn_product-action(type='button')
+                                        svg(fill='none' height='24' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg')
+                                            use(xlink:href='images/svg.svg#pencil' xmlns='http://www.w3.org/1999/xlink')
+                                .c-specifications-section__action
+                                    button.c-btn.c-btn_product-action(type='button')
+                                        svg(fill='none' height='24' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg')
+                                            svg(fill='none' height='24' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg')
+                                                use(xlink:href='images/svg.svg#reload' xmlns='http://www.w3.org/1999/xlink')
+                .c-specifications-section__list
+                    .c-product-list.c-product-list_lg.c-product-list_bordered.row
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                .c-specifications-section__list
+                    .c-product-list.c-product-list_lg.c-product-list_bordered.row
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                .c-specifications-section__list
+                    .c-product-list.c-product-list_lg.c-product-list_bordered.row
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+
+
+
+
+mixin c-product-list__item()
+    .col-12.c-product-list__item
+        .align-items-center.c-product-card_left-control.c-product-card.c-product-card_lg
+            .c-checkbox-primary
+                input#example-checkbox.c-checkbox.c-checkbox_primary(type='checkbox')
+                label.c-label.mb-0(for='example-checkbox')
+            a.c-product-card__preview(href='#')
+                img(alt='' src='images/cupboard.png')
+            .c-product-card__body.d-flex.p-0
+                .c-product-card__description
+                    .c-product-desc
+                        a.c-product-desc__text.c-product-desc__item(href='#')
+                            | 19" Напольный
+                            | серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе, двери
+                            | передняя перфорированная, задние двойные перфорированные, боковые стенки,
+                            | регулируемые опоры, ролики, RAL 9005
+                        .c-product-desc__articul.c-product-desc__item 343423426524345
+                .c-icon-list
+                    .c-icon-list__item
+                        button.c-btn.c-btn_product-action(type='button')
+                            svg(fill='none' height='24' width='24' xmlns='http://www.w3.org/2000/svg')
+                                use(xlink:href='images/svg.svg#close' xmlns='http://www.w3.org/1999/xlink')
+                    .c-icon-list__item
+                        button.c-btn.c-btn_product-action(type='button')
+                            svg(fill='none' height='20' width='22' xmlns='http://www.w3.org/2000/svg')
+                                use(xlink:href='images/svg.svg#favorite' xmlns='http://www.w3.org/1999/xlink')

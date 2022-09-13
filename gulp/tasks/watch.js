@@ -13,7 +13,7 @@ function watchFiles () {
   // css
   watch(`${config.src.css}/**/*.css`, vendor);
   // html
-  watch(`${config.src.templates}/**/*.html`, html);
+  watch(`${config.src.templates}/**/*.pug`, html);
   // assets
   watch(`${config.src.fonts}/*.{${config.ext.fonts}}`, fonts);
   watch(`${config.src.images}/*.{${config.ext.images}}`, images);

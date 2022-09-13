@@ -41,6 +41,7 @@
   "dependencies": {
     "@chenfengyuan/datepicker": "^1.0.10",
     "bootstrap": "^5.1.3",
+    "gulp-pug": "^5.0.0",
     "jquery": "^3.6.0",
     "jquery-mask-plugin": "^1.14.16",
     "lazysizes": "^0.6.0",

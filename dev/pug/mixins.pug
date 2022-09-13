@@ -1,0 +1,35 @@
+mixin footerMenuList(...items)
+    ul.bottom-menu__list
+        each item in items
+            li.c-bottom-menu__item
+                a.c-bottom-menu__link.c-link(href='#')= item
+
+mixin breadCrumbs(...items)
+    -let length = Object.keys(items).length
+    -let i = 1
+    .c-breadcrumbs
+        ul.c-breadcrumbs__list
+            li.c-breadcrumbs__item
+                a.c-breadcrumbs__link(href='#')
+                    span.c-breadcrumbs__title
+                        img(alt='' height='14' src='images/home.png' width='14')
+            each item in items
+                if i === length
+                    li.c-breadcrumbs__item
+                        span.c-breadcrumbs__title= item.value
+                else
+                    li.c-breadcrumbs__item
+                        a.c-breadcrumbs__link(href='#')
+                            span.c-breadcrumbs__title= item.value
+                -i++
+
+mixin c-files-list__item(doc)
+    a.c-doc-item.c-doc-item_row(download='' href= doc.href target='_blank')
+        span.c-doc-item__view
+            svg(fill='none' height='24' width='18' xmlns='http://www.w3.org/2000/svg')
+                use(xlink:href= doc.icon  xmlns='http://www.w3.org/1999/xlink')
+        span.c-doc-item__name= doc.value
+        span.c-doc-item__size= doc.size
+            span.c-doc-item__icon
+                svg(fill='none' height='24' width='24' xmlns='http://www.w3.org/2000/svg')
+                    path(d='M11.9 15.5a.2.2 0 0 0 .2 0l2.7-3.3c0-.2 0-.3-.2-.3H13v-8l-.2-.1h-1.4l-.2.1v8H9.4c-.2 0-.3.1-.2.3l2.7 3.3Zm8.7-.8h-1.4c-.1 0-.2 0-.2.2v3.6H5v-3.6c0-.1 0-.2-.2-.2H3.4s-.2 0-.2.2v4.6c0 .4.4.8.8.8h16c.4 0 .8-.4.8-.8v-4.6l-.2-.2Z' fill='#21458C')

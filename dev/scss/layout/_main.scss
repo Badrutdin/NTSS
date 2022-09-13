@@ -1146,3 +1146,33 @@ body {
     margin-top: 30px;
   }
 }
+
+.characters-table{
+  width: 100%;
+  &__row{
+    &:nth-child(odd){
+      background-color: #F7F7FF;
+    }
+    &:hover,&:focus{
+      background-color: $color-primary;
+      color: $color-lightest;
+      font-weight: 500;
+    }
+    padding: 13px 20px;
+    border-radius: 6px;
+    color: $color-darken;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  &__item{
+
+  }
+}
+
+
+.c-header-detail{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #21458C;
+}

@@ -1,0 +1,293 @@
+extends ../pug/layout
+append content
+    #popup-form.c-modal.mfp-hide
+        button.mfp-close.modal-close
+            svg(fill='none' height='30' width='30' xmlns='http://www.w3.org/2000/svg')
+                use(xlink:href='images/svg.svg#modal-close' xmlns='http://www.w3.org/1999/xlink')
+        .c-added-basket-section
+            .c-added-basket-section__main
+                .c-added-basket-section__main-title
+                    h2.c-title.c-title_lg.c-title_main.text-center Товар добавлен в корзину
+                .c-added-basket-section__main-product
+                    .row
+                        .col-12.col-lg-8
+                            .align-items-center.c-product-card_left-control.c-product-card_card-added.c-product-card.c-product-card_bordered.c-product-card_lg
+                                .c-checkbox-primary
+                                    input#example-checkbox.c-checkbox.c-checkbox_primary(type='checkbox')
+                                    label.c-label.mb-0(for='example-checkbox')
+                                a.c-product-card__preview(href='#')
+                                    img(alt='' src='images/cupboard.png')
+                                .c-product-card__body
+                                    .c-product-card__description
+                                        .c-product-desc
+                                            a.c-product-desc__text.c-product-desc__item(href='#')
+                                                | 19" Напольный серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной
+                                                | в сборе, двери передняя перфорированная, задние двойные
+                                                | перфорированные, боковые стенки, регулируемые опоры, ролики, RAL 9005
+                                            .c-product-desc__articul.c-product-desc__item  343423426524345
+                                    .c-product-card__controls
+                                        .c-product-controls
+                                            .c-product-controls__body
+                                                .c-product-controls__counter.c-input-counter
+                                                    input.c-input-counter__input.c-input.c-input_md.c-input_style-secondary.c-input_color-primary(type='text' value='1')
+                                                    button.c-input-counter__left-ctrl(type='button')
+                                                        | -
+                                                    button.c-input-counter__right-ctrl(type='button')
+                                                        | +
+                        .col-12.col-lg-4
+                            .c-total-price
+                                .c-total-price__item
+                                    .row
+                                        .col-8
+                                            .c-total-price__position Товаров в корзине:
+                                        .col-4
+                                            .c-total-price__price 3
+                                .c-total-price__item
+                                    .row
+                                        .col-8
+                                            .c-total-price__position Стоимость:
+                                        .col-4
+                                            .c-total-price__price 24 590 ₽
+            .c-added-basket-section__related
+                h2.c-added-basket-section__related-title С этим товаром покупают
+                .c-added-basket-section__related-list
+                    .c-product-list.c-product-list_lg.row
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+                        +c-product-list__item()
+            .c-added-basket-section__footer
+                button.c-btn.c-btn_style-default.c-btn_color-light.c-btn_lg(type='reset') Продолжить покупки
+    .c-content.c-content_default
+        .container
+            .row.mb-1
+                .col-4
+                    .c-input-wrap.c-input-wrap_lg.c-input-wrap_anim-label
+                        input#search.c-input-wrap__input.c-input.c-input_style-default.c-input_lg.c-input_color-primary(type='text')
+                        label.c-input-wrap__label(for='search') Поиск по каталогу
+                .col-3
+                    select.c-input.c-input_style-default.c-input_lg.c-input_color-primary(id='' name='')
+                        option(value='0') Сортировать по
+                        option(value='1') Сортировка 1
+                        option(value='2') Сортировка 2
+                        option(value='3') Сортировка 3
+                .col-5.d-flex.justify-content-end
+                    .c-view-list.row
+                        .c-view-list__item.col-auto
+                            button.c-view-btn.c-view-btn_active(title='список' type='button')
+                                svg(fill='none' height='24' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg')
+                                    rect(height='6' width='6')
+                                    rect(height='4' width='15' x='9' y='1')
+                                    rect(height='6' width='6' y='9')
+                                    rect(height='4' width='15' x='9' y='10')
+                                    rect(height='6' width='6' y='18')
+                                    rect(height='4' width='15' x='9' y='19')
+                        .c-view-list__item.col-auto
+                            button.c-view-btn(title='плитка' type='button')
+                                svg(fill='none' height='24' viewbox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg')
+                                    rect(height='6' width='6')
+                                    rect(height='6' width='6' y='9')
+                                    rect(height='6' width='6' y='18')
+                                    rect(height='6' width='6' x='9')
+                                    rect(height='6' width='6' x='9' y='9')
+                                    rect(height='6' width='6' x='9' y='18')
+                                    rect(height='6' width='6' x='18')
+                                    rect(height='6' width='6' x='18' y='9')
+                                    rect(height='6' width='6' x='18' y='18')
+            .row
+                .col-2
+                    ul.c-aside-menu
+                        li.c-aside-menu__btn
+                            button.c-aside-btn(data-accordion='' type='button') Категории
+                            .panel
+                                ul.c-accordion-list
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                        li.c-aside-menu__btn
+                            button.c-aside-btn(data-accordion='' type='button') Категории
+                            .panel
+                                ul.c-accordion-list
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                        li.c-aside-menu__btn
+                            button.c-aside-btn(data-accordion='' type='button') Ширина
+                            .panel
+                                ul.c-accordion-list
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                                    .c-accordion-list__item
+                                        .c-checkbox
+                                            input#tst.c-checkbox__input(type='checkbox')
+                                            label.c-checkbox__label(for='tst')
+                                                span.c-checkbox__inner 22U
+                .col-10.mt-2
+                    .c-product-list.c-product-list_md.c-product-list_fixed-item.row
+                        - var items = 12;
+                            while items !== 0
+                                .c-product-list__item.col-auto
+                                    .c-product-card.c-product-card_md.c-product-card_events(data-id='123')
+                                        .c-product-card__actions.c-icon-list
+                                            .c-icon-list__item
+                                                button.c-btn.c-btn_product-action(type='button')
+                                                    svg(fill='none' height='18' width='18' xmlns='http://www.w3.org/2000/svg')
+                                                        use(xlink:href='images/svg.svg#comparisons' xmlns='http://www.w3.org/1999/xlink')
+                                            .c-icon-list__item
+                                                button.c-btn.c-btn_product-action(type='button')
+                                                    svg(fill='none' height='20' width='22' xmlns='http://www.w3.org/2000/svg')
+                                                        use(xlink:href='images/svg.svg#favorite' xmlns='http://www.w3.org/1999/xlink')
+                                            .c-icon-list__item
+                                                button.c-btn.c-btn_product-action(type='button')
+                                                    svg(fill='none' height='16' width='22' xmlns='http://www.w3.org/2000/svg')
+                                                        use(xlink:href='images/svg.svg#eye' xmlns='http://www.w3.org/1999/xlink')
+                                        a.c-product-card__preview(href='#')
+                                            img(alt='' src='images/cupboard.png')
+                                        .c-product-card__description
+                                            .c-product-desc
+                                                a.c-product-desc__text.c-product-desc__item(href='#')
+                                                    | Описание по запросу Описание по запросу Описание по запросу Описание по запросу
+                                                    | Описание по запросу Описание по запросу Описание по запросу Описание по запросу
+                                                    | Описание по запросу Описание по запросу Описание по запросу
+                                                .c-product-desc__articul.c-product-desc__item  123
+                                                .c-product-desc__price.c-product-desc__item
+                                                    .c-product-price
+                                                        span.c-product-price__item 14 990 ₽
+                                                        span.c-product-price__item.c-product-price__old 19 990 ₽
+                                        .c-product-card__controls
+                                            .c-product-controls
+                                                .c-product-controls__body
+                                                    .c-product-controls__counter.c-input-counter
+                                                        input.c-input-counter__input.c-input.c-input_md.c-input_style-secondary.c-input_color-primary(type='text' value='1')
+                                                        button.c-input-counter__left-ctrl(type='button') -
+                                                        button.c-input-counter__right-ctrl(type='button') +
+                                                    a.c-product-controls__basket.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_sm(data-basket-btn='' href='#popup-form') В корзину
+                                                .c-product-controls__footer
+                                                    a.c-product-controls__buy.c-btn.c-btn_style-default.c-btn_color-light.c-btn_sm(href='#buy') Купить в один клик
+                                - items--
+                        .c-product-list__footer
+                            .c-pagination-list
+                                .c-pagination-list__item
+                                    a.c-btn.c-btn_pagination(href='#')
+                                        svg.c-btn__icon(fill='none' height='18' viewbox='0 0 10 18' width='10' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M8.28305 0.500819L0.510046 8.47482C0.373525 8.61488 0.297119 8.80273 0.297119 8.99832C0.297119 9.19391 0.373525 9.38176 0.510046 9.52182L8.28305 17.4988C8.34664 17.5641 8.42267 17.616 8.50666 17.6515C8.59065 17.6869 8.68088 17.7052 8.77205 17.7052C8.86321 17.7052 8.95344 17.6869 9.03743 17.6515C9.12142 17.616 9.19745 17.5641 9.26105 17.4988C9.39188 17.3649 9.46513 17.1851 9.46513 16.9978C9.46513 16.8106 9.39188 16.6308 9.26105 16.4968L1.95155 8.99832L9.26105 1.50132C9.39143 1.36744 9.46439 1.18795 9.46439 1.00107C9.46439 0.814191 9.39143 0.634697 9.26105 0.500819C9.19745 0.435504 9.12142 0.38359 9.03743 0.348143C8.95344 0.312696 8.86321 0.294434 8.77205 0.294434C8.68088 0.294434 8.59065 0.312696 8.50666 0.348143C8.42267 0.38359 8.34664 0.435504 8.28305 0.500819Z' fill='#7C7C7C')
+                                - var items = 0;
+                                    while items !== 5
+                                        .c-pagination-list__item
+                                            a.c-btn.c-btn_pagination(href='#')=  ++items
+                                .c-pagination-list__item
+                                    a.c-btn.c-btn_pagination(href='#')
+                                        svg.c-btn__icon(fill='none' height='18' viewbox='0 0 10 18' width='10' xmlns='http://www.w3.org/2000/svg')
+                                            path(d='M1.7172 17.4992L9.4902 9.52518C9.62672 9.38512 9.70313 9.19727 9.70313 9.00168C9.70313 8.80609 9.62672 8.61824 9.4902 8.47818L1.7172 0.501181C1.6536 0.435865 1.57757 0.383951 1.49358 0.348505C1.4096 0.313057 1.31936 0.294796 1.2282 0.294796C1.13704 0.294796 1.0468 0.313057 0.962813 0.348505C0.878827 0.383951 0.802794 0.435865 0.739199 0.501181C0.608365 0.635126 0.535119 0.814939 0.535119 1.00218C0.535119 1.18942 0.608365 1.36923 0.739199 1.50318L8.0487 9.00168L0.739199 16.4987C0.608814 16.6326 0.535851 16.8121 0.535851 16.9989C0.535851 17.1858 0.608814 17.3653 0.739199 17.4992C0.802794 17.5645 0.878827 17.6164 0.962813 17.6519C1.0468 17.6873 1.13704 17.7056 1.2282 17.7056C1.31936 17.7056 1.4096 17.6873 1.49358 17.6519C1.57757 17.6164 1.6536 17.5645 1.7172 17.4992Z' fill='#21458C')
+
+
+
+mixin c-product-list__item()
+    .col-12.col-xl-6.c-product-list__item
+        .align-items-center.c-product-card_left-control.c-product-card.c-product-card_lg.c-product-card_bordered.c-product-card_events
+            .c-checkbox-primary
+                input#example-checkbox.c-checkbox.c-checkbox_primary(type='checkbox')
+                label.c-label.mb-0(for='example-checkbox')
+            a.c-product-card__preview(href='#')
+                img(alt='' src='images/cupboard.png')
+            .c-product-card__body
+                .c-product-card__description
+                    .c-product-desc
+                        a.c-product-desc__text.c-product-desc__item(href='#')
+                            | 19" Напольный серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной
+                            | в сборе, двери передняя перфорированная, задние двойные
+                            | перфорированные, боковые стенки, регулируемые опоры, ролики, RAL 9005
+                        .c-product-desc__articul.c-product-desc__item 343423426524345
+                .c-product-card__controls
+                    .c-product-controls
+                        .c-product-controls__body
+                            .c-product-controls__counter.c-input-counter
+                                input.c-input-counter__input.c-input.c-input_md.c-input_style-secondary.c-input_color-primary(type='text' value='1')
+                                button.c-input-counter__left-ctrl(type='button') -
+                                button.c-input-counter__right-ctrl(type='button') +
+                            a.c-product-controls__basket.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_sm(data-basket-btn='' href='#popup-form') В корзину

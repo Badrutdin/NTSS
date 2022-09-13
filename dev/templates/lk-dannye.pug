@@ -1,0 +1,49 @@
+extends ../pug/layout
+append content
+    .container
+        h1.c-title.c-title_lg.c-title_main Личный кабинет
+        .c-content.c-content_default
+            .align-items-baseline.justify-content-between.row
+                .col-auto
+                    ul.c-tabs-list.c-tabs-list_personal.row
+                        li.c-tabs-list__item.col-auto
+                            a.c-tabs-link.c-tabs-link_ghost.c-btn.c-btn_md.c-btn_style-underline.c-btn_color-primary(href='#')  Спецификации
+                        li.c-tabs-list__item.col-auto
+                            a.c-tabs-link.c-tabs-link_ghost.c-btn.c-btn_active.c-btn_md.c-btn_style-underline.c-btn_color-primary(href='#')  Мои данные
+                .col-auto
+                    a.c-btn.c-btn_sm.c-btn_style-underline.c-btn_color-primary.c-btn_color-primary.w-auto(href='#') Выйти из кабинета
+            form(action='#')
+                .row
+                    .col-12.col-xl-6.mb-3.mb-xl-0
+                        .c-personal-list
+                            .c-personal-list__item
+                                label.c-label(for='full-name') ФИО
+                                input#full-name.w-100.c-input.c-input_style-default.c-input_lg.c-input_color-primary(placeholder='Константин Константинопольский' required='' type='text' value='Константин Константинопольский')
+                            .c-personal-list__item
+                                label.c-label(for='email')  E-mail
+                                input#email.w-100.c-input.c-input_style-default.c-input_lg.c-input_color-primary(placeholder='username@sitename.ru' required='' type='email' value='username@sitename.ru')
+                            .c-personal-list__item
+                                label.c-label(for='address') Адрес для доставки
+                                input#address.w-100.c-input.c-input_style-default.c-input_lg.c-input_color-primary(placeholder='123456, г. Москва, ул. Горького, д. 1, стр. 2, офис 3' required='' type='text' value='123456, г. Москва, ул. Горького, д. 1, стр. 2, офис 3')
+                            .c-personal-list__item
+                                label.c-label(for='comment') Комментарий
+                                textarea#comment.w-100.c-input.c-input_style-default.c-input_color-primary.c-input_textarea.c-input_lg(name='comment' placeholder='Введите свой комментарий' rows='10')
+                            .c-personal-list__item
+                                .c-checkbox-primary.c-checkbox-primary_default
+                                    input#example-checkbox.c-checkbox.c-checkbox_primary(type='checkbox')
+                                    label.c-label(for='example-checkbox') Получать рассылку
+                    .col-12.col-xl-6
+                        .c-personal-list
+                            .c-personal-list__item
+                                label.c-label(for='phone') Телефон
+                                input#phone.w-100.c-input.c-input_style-default.c-input_lg.c-input_color-primary(placeholder='+7 999 123 23 45' required='' type='tel' value='+79991232345')
+                            .c-personal-list__item
+                                label.c-label(for='company') Компания
+                                input#company.w-100.c-input.c-input_style-default.c-input_lg.c-input_color-primary(placeholder='ООО «Наименование компании»' required='' type='text' value='ООО «Наименование компании»')
+                .row.mt-3
+                    .col-12.col-lg-6.offset-lg-3
+                        .row
+                            .col-6.justify-content-center
+                                button.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_lg(type='submit') Сохранить
+                            .col-6
+                                button.c-btn.c-btn_style-default.c-btn_color-light.c-btn_lg(type='reset') Отмена

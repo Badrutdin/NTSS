@@ -1,0 +1,169 @@
+extends ../pug/layout
+append content
+    .c-section.c-section_lg.pt-0
+        h1.visually-hidden Телекоммуникационные и серверные шкафы ntss
+        .c-main-banner
+            .owl-carousel.c-slider.c-slider_h-100(data-main-slider='3')
+                .c-slider__item(style='background-image: url(images/banner.jpg);')
+                    .row.c-main-banner__title
+                        .offset-6.col-4 Телекоммуникационные и серверные
+                            b шкафы ntss
+                .c-slider__item(style='background-image: url(images/banner.jpg);')
+                    .row(style='color: white; font-size: 40px; line-height: 1.4; margin-top: 150px; text-transform:uppercase;')
+                        .offset-6.col-4 Телекоммуникационные и серверные
+                            b шкафы ntss
+    .container
+        .c-section.c-section_lg
+            .c-section__header
+                h2.c-title.c-title_md.text-uppercase.text-center продукты и решения
+            .c-section__body
+                .row.u-reset-indent
+                    +c-product-list__item-1()
+                    +c-product-list__item-1()
+                    +c-product-list__item-1()
+                    +c-product-list__item-1()
+                    +c-product-list__item-1()
+                    +c-product-list__item-1()
+        .c-section.c-section_lg
+            .c-section__body
+                .row
+                    .col-5
+                        .c-title.c-title_sm.mb-2 Структурированная кабельная система (СКС)
+                        p.mb-5  Это основа информационной структуры любого предприятия. Всё разнообразие информационных сервисов различных типов и назначений, различных периферийных устройств, а так же автоматизированных рабочих мест, СКС позволяет объединить в одну систему. Такие системы как: локальные и телефонные сети, охранно-пожарная сигнализация, система видеонаблюдения, контроль и управление доступом, являются неотъемлемой частью любой современной организации.
+                        button.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_lg.c-btn_width-md(type='button') Защита проекта
+                    .col-6.offset-1
+                        .slider-wrap
+                            .owl-carousel.c-slider(data-main-slider='2')
+                                .c-slider__item
+                                    .row.c-product-list.c-product-list_md
+                                        +c-product-list__item-2()
+                                        +c-product-list__item-2()
+                                        +c-product-list__item-2()
+                                        +c-product-list__item-2()
+                                        +c-product-list__item-2()
+                                        +c-product-list__item-2()
+                                .c-slider__item
+                                    .c-product-list.c-product-list_md.row
+                                        c-product-list__item-3()
+                                        c-product-list__item-3()
+                                        c-product-list__item-3()
+                            .slider-wrap__slider-controls
+    .c-section.c-section_lg
+        a.c-secondary-banner(href='#' style='background-image:url(images/calc-banner.jpg);')
+            .c-secondary-banner__title
+                | Калькулятор цены
+                br
+                b Системы изоляции ntss
+                br
+                | без регистрации
+    .container
+        .c-section.c-section_lg
+            .c-section__header
+                .c-title.c-title_md.text-uppercase новости
+            .c-section__body
+                .row
+                    .col-3
+                        a.c-news-card.c-news-card_events(href='#')
+                            .c-news-card__preview(style='background-image: url(images/news-1.jpg)')
+                            .c-news-card__title Название новости, может быть в
+                                br
+                                | несколько строк
+                            .c-news-card__date 01.01.2022
+                    .col-3
+                        a.c-news-card.c-news-card_events(href='#')
+                            .c-news-card__preview(style='background-image: url(images/news-1.jpg)')
+                            .c-news-card__title Название новости, может быть в
+                                br
+                                | несколько строк
+                            .c-news-card__date 01.01.2022
+                    .col-3
+                        a.c-news-card.c-news-card_events(href='#')
+                            .c-news-card__preview(style='background-image: url(images/news-1.jpg)')
+                            .c-news-card__title Название новости, может быть в
+                                br
+                                | несколько строк
+                            .c-news-card__date 01.01.2022
+                    .col-3
+                        a.c-news-card.c-news-card_events(href='#')
+                            .c-news-card__preview(style='background-image: url(images/news-1.jpg)')
+                            .c-news-card__title Название новости, может быть в
+                                br
+                                | несколько строк
+                            .c-news-card__date 01.01.2022
+        .c-section.c-section_lg
+            .c-section__header
+                h2.c-title.c-title_md.text-uppercase.text-center О компании NTSS
+            .c-section__body
+                .row
+                    .col-5
+                        p.mb-5
+                        | Основанная в 2009 году, NTSS является глобальной высокотехнологичной компанией, предоставляющей
+                        | высокоскоростные сетевые решения и услуги для нескольких отраслей промышленности. NTSS
+                        | предлагает широкий спектр стандартных телекоммуникационных продуктов, а также может настраивать
+                        | продукты в соответствии с индивидуальными потребностями. Мы управляем нашей отраслью,
+                        | обеспечивая эффективность, высокое качество, непрерывные инновации и легкость доступа ко всем
+                        | нашим клиентам.
+                        button.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_lg.c-btn_width-md(type='button') Читать подробнее
+                    .col-6.offset-1
+                        img(alt='' src='images/about-main-page.jpg')
+    .c-section.c-section_lg.u-bg-tertiary
+        .owl-carousel.c-slider.c-slider_w-auto(data-main-slider='3')
+            .c-slider__item
+                img(alt='' src='images/banner_download.png')
+            .c-slider__item
+                img(alt='' src='images/about-main-page.jpg')
+        .slide-desc Каталог телекоммуникационных и серверных шкафов NTSS
+            a.c-link.mt-3(download='' href='images/banner_download.png') Скачать
+
+mixin c-product-list__item-1()
+    .col-2
+        a.c-category-card.c-category-card_events(href='#')
+            .c-category-card__preview(style='background-image: url(images/ao-1.png)')
+            .c-category-card__title Активное
+                br
+                | оборудование
+
+mixin c-product-list__item-2()
+    .col-4.c-product-list__item
+        a.c-simple-product-card.c-simple-product-card_events.c-link(href='#')
+            .c-simple-product-card__body(style='background-image: url(images/kab.png)')
+            .c-simple-product-card__title Кабельная сборка NTSS PREMIUM 6pc, UTP CAT6, оконцована разъемами KEYSTONE RJ45 UTP CAT6, заделка в чулке, вывод 0.6м, длина 30м, LSZH, оранжевый
+
+mixin c-product-list__item-3()
+    .c-product-list__item.col-4
+        .c-product-card.c-product-card_md.c-product-card_events
+            .c-product-card__actions.c-icon-list
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='18' width='18' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M17.8 15.6H1.7V.9L1.5.7H.2L0 1v16.2l.2.1h17.6l.2-.1v-1.4l-.2-.1Zm-14-2H5l.2-.1v-3.4L5 10H3.8c-.2 0-.2.1-.2.2v3.4l.1.2Zm3.5 0h1.3l.2-.1V6c0-.1 0-.2-.2-.2H7.3l-.2.2v7.5l.2.2Zm3.6 0h1.3l.2-.1V7.8l-.2-.2h-1.3l-.2.2v5.7c0 .1 0 .2.2.2Zm3.5 0h1.3l.2-.1V4.1s0-.2-.2-.2h-1.3l-.2.2v9.4l.2.2Z' fill='#7C7C7C')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='20' width='22' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M20.6 4.6a6 6 0 0 0-3.3-3.2 6.2 6.2 0 0 0-6.3 1A6.1 6.1 0 0 0 7 .8a6.2 6.2 0 0 0-5.6 3.7A6 6 0 0 0 .9 7c0 .8.1 1.6.5 2.5l1 2a35 35 0 0 0 7.6 7l.6.5c.2.1.6.1.8 0l.6-.4s2.2-1.4 4.4-3.5c1.3-1.2 2.3-2.4 3.1-3.5.5-.7.9-1.5 1.1-2.1.4-.9.5-1.7.5-2.5a6 6 0 0 0-.5-2.4ZM11 17.1s-8.3-5.3-8.3-10A4.4 4.4 0 0 1 11 5a4.4 4.4 0 0 1 4-2.4c2.4 0 4.3 2 4.3 4.3 0 4.8-8.3 10.1-8.3 10.1Z' fill='#7C7C7C')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='16' width='22' xmlns='http://www.w3.org/2000/svg')
+                            path(d='M20.3 7c.4.6.4 1.4 0 2-1.5 2-5.1 6-9.3 6-4.2 0-7.8-4-9.3-6a1.7 1.7 0 0 1 0-2C3.2 5 6.8 1 11 1c4.2 0 7.8 4 9.3 6v0Z' stroke='#7C7C7C' stroke-linecap='round' stroke-linejoin='round' stroke-width='2')
+                            path(d='M11 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z' stroke='#7C7C7C' stroke-linecap='round' stroke-linejoin='round' stroke-width='2')
+            a.c-product-card__preview(href='#')
+                img(alt='' src='images/cupboard.png')
+            .c-product-card__description
+                .c-product-desc
+                    a.c-product-desc__text.c-product-desc__item(href='#') 19" Напольный серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе, две dljsfhkdwhsfhdslfhsdl;f
+                    .c-product-desc__articul.c-product-desc__item
+                        | 343423426524345
+                    .c-product-desc__price.c-product-desc__item
+                        .c-product-price
+                            span.c-product-price__item 14 990 ₽
+                            span.c-product-price__item.c-product-price__old 19 990 ₽
+            .c-product-card__controls
+                .c-product-controls
+                    .c-product-controls__body
+                        .c-product-controls__counter.c-input-counter
+                            input.c-input-counter__input.c-input.c-input_md.c-input_style-secondary.c-input_color-primary(type='text' value='1')
+                            button.c-input-counter__left-ctrl(type='button') -
+                            button.c-input-counter__right-ctrl(type='button') +
+                        a.c-product-controls__basket.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_sm(data-basket-btn='' href='#popup-form' type='button') В корзину
+                    .c-product-controls__footer
+                        button.c-product-controls__buy.c-btn.c-btn_style-default.c-btn_color-light.c-btn_sm(href='#' type='button') Купить в один клик
