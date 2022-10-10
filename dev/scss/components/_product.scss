@@ -1,0 +1,145 @@
+.c-product-desc {
+  &__text {
+    text-decoration: none;
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    height: 2.4em;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: $color-darken;
+
+    &:hover, &:focus {
+      color: $color-primary;
+    }
+  }
+
+  &__articul {
+    font-size: 12px;
+    color: $color-secondary;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: $color-darkest;
+  }
+
+
+  &_lg {
+
+  }
+
+  &_sm {
+
+  }
+}
+
+.c-product-controls {
+  &_lg {
+    display: flex;
+    max-width: 100%;
+  }
+
+  &_lg &__body {
+    width: 330px;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  &_sm {
+    flex-direction: column;
+    width: 280px;
+  }
+
+  &__body {
+    display: flex;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+
+  &__counter {
+    width: 100px;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  &_counter-lg {
+    .c-product-controls__counter {
+      width: 140px;
+    }
+  }
+
+  &__basket {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    width: 100%;
+  }
+}
+
+.c-product-list {
+  //display: flex;
+  //flex-wrap: wrap;
+  //margin-right: -10px;
+  //margin-left: -10px;
+  &_bordered {
+    .c-product-list__item + .c-product-list__item {
+      border-top: 1px solid $color-lighten;
+    }
+  }
+
+
+  &__item {
+    //padding-left: 10px;
+    //padding-right: 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &_fixed-item.c-product-list_sm.c-product-list_custom-gutter {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &_fixed-item.c-product-list_sm.c-product-list_custom-gutter &__item {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &_fixed-item.c-product-list_sm &__item {
+    width: 220px;
+  }
+
+  &_fixed-item.c-product-list_md &__item {
+    width: 286px;
+  }
+
+  &_fixed-item.c-product-list_lg &__item {
+    width: 329px;
+  }
+
+}
+
+.c-product-price {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $color-darkest;
+
+  &__old {
+    font-size: 12px;
+    text-decoration: line-through;
+  }
+}

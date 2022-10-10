@@ -1,0 +1,14 @@
+.c-modal {
+  background-color: $color-lightest;
+  width: 100%;
+  margin: auto;
+  max-width: 1514px;
+  padding: 50px 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.mfp-close.modal-close {
+  top: 64px;
+  right: 50px;
+}

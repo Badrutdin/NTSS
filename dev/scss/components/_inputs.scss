@@ -97,14 +97,14 @@
 
 }
 
-.c-label{
+.c-label {
   display: flex;
   margin-bottom: 14px;
   font-size: 16px;
   color: #555555;
 }
 
-.c-input_textarea{
+.c-input_textarea {
   resize: none;
   padding: 22px 30px;
   height: auto;
@@ -117,6 +117,7 @@
   z-index: -1;
   opacity: 0;
 }
+
 /* label */
 .c-checkbox-primary .c-checkbox + .c-label::before {
   content: '';
@@ -150,15 +151,86 @@
 .c-checkbox-primary.c-checkbox-primary_default .c-checkbox + .c-label::before {
   margin-right: 14px;
 }
+
 .c-checkbox-primary .c-checkbox:disabled + .c-label::before {
-  background-color: rgba($color-dark,.2) ;
+  background-color: rgba($color-dark, .2);
   border-color: $color-dark;
 }
 
 /*disabled checked*/
 .c-checkbox-primary .c-checkbox:disabled:checked + .c-label::before {
-  background-color: rgba($color-dark,.2) ;
+  background-color: rgba($color-dark, .2);
   border-color: $color-dark;
-  background-image: url("");
 }
 
+.c-input-counter {
+  position: relative;
+
+  &__input {
+
+  }
+
+  &__right-ctrl {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+  }
+
+  &__left-ctrl {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+.c-checkbox {
+  display: inline-flex;
+
+  &_primary {
+    .c-checkbox__label:before {
+      border-color: $color-primary;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+
+    &:checked + .c-checkbox__label:before {
+      background-image: url(images/checkmark.svg);
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: $color-lightest;
+      border: 1px solid;
+      border-radius: 4px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+  }
+
+  &__inner {
+    margin-left: 8px;
+  }
+}

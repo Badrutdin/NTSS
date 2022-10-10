@@ -1,0 +1,10 @@
+.c-pagination-list {
+  display: flex;
+  margin-right: -6px;
+  margin-left: -6px;
+
+  &__item {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}

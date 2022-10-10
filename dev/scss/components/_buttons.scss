@@ -48,7 +48,8 @@
 .c-btn_style-ghost.c-btn_color-primary {
   color: $color-primary;
   border: 1px solid $color-primary;
-  &:hover,&:focus{
+
+  &:hover, &:focus {
     background-color: $color-primary;
     color: $color-lightest;
   }
@@ -178,3 +179,47 @@
     cursor: default;
   }
 }
+
+.c-aside-btn {
+  border: 1px solid $color-lighten;
+  border-radius: 4px;
+  background-color: $color-lightest;
+  color: $color-darken;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+
+  &_active, &:hover {
+    background-color: $color-primary;
+    color: $color-lightest;
+  }
+}
+
+.c-view-btn {
+  background-color: transparent;
+  padding: 0;
+
+  svg {
+    fill: $color-primary;
+  }
+
+  &:hover, &:focus, &_active {
+    svg {
+      fill: $color-secondary;
+    }
+  }
+}
+
+.c-link {
+  text-decoration: none;
+  display: block;
+
+  &_events {
+    &:hover, &:focus {
+      color: $color-primary;
+    }
+  }
+}
+

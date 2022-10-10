@@ -1,0 +1,38 @@
+.c-tabs-list {
+  display: flex;
+  margin-bottom: 30px;
+
+  &__item {
+    margin-bottom: 20px;
+  }
+
+  &_news-list {
+    margin-bottom: 20px;
+  }
+
+}
+
+.c-tabs-link {
+  &_ghost {
+    text-transform: uppercase;
+    padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &_default {
+    width: auto;
+    text-decoration: none;
+    padding: 14px 20px;
+    background-color: $color-lightest;
+    border: 1px solid #F2F2F2;
+    color: $color-dark;
+
+    &:hover, &:focus, &.c-tabs-link_active {
+      background-color: $color-primary;
+      color: $color-lightest;
+      border-color: transparent;
+    }
+
+  }
+}

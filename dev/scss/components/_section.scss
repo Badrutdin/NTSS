@@ -7,7 +7,8 @@
   &_md {
     padding-top: 25px;
     padding-bottom: 25px;
-    & .c-section__header{
+
+    & .c-section__header {
       margin-bottom: 30px;
     }
   }
@@ -15,8 +16,139 @@
   &_lg {
     padding-top: 40px;
     padding-bottom: 40px;
-    & .c-section__header{
+
+    & .c-section__header {
       margin-bottom: 40px;
     }
+  }
+}
+
+.c-docs-section {
+  margin-bottom: 40px;
+
+  &__header {
+    margin-bottom: 40px;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $color-darken;
+
+  }
+
+  &__link {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $color-dark;
+  }
+
+}
+
+.c-specifications-section {
+  padding: 30px;
+  border-radius: 6px;
+  background-color: $color-lightest;
+  margin-bottom: 20px;
+
+  &_bordered {
+    border: 1px solid #F2F2F2;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  &__action {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-flex;
+  }
+
+  &__header {
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-darkest;
+
+  }
+
+  &__link {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $color-dark;
+  }
+
+}
+
+.c-added-basket-section {
+  &__main {
+    margin-bottom: 56px;
+  }
+
+  &__footer {
+    margin-top: 20px;
+  }
+
+  &__related-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-darken;
+    margin-bottom: 24px;
+  }
+}
+
+.c-files-section {
+  &_cols-1 {
+    .c-files-list .c-files-list__item:nth-child(even) .c-doc-item {
+      background-color: $color-lightest;
+    }
+  }
+
+  &_cols-2 {
+    .c-files-list .c-files-list__item:nth-child(4n - 1) .c-doc-item, .c-files-list .c-files-list__item:nth-child(4n) .c-doc-item {
+      background-color: $color-lightest;
+    }
+  }
+
+  &__footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $color-dark;
+  }
+
+  &__header {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $color-darkest;
   }
 }

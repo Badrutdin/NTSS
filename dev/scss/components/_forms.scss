@@ -21,3 +21,41 @@
     flex-shrink: 0;
   }
 }
+
+.c-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__body {
+    width: 850px;
+    max-width: 100%;
+  }
+
+  &__field {
+    margin-bottom: 20px;
+  }
+
+  &__control {
+    margin-bottom: 20px;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: $color-darken;
+    text-align: center;
+  }
+
+  &__footer {
+    margin-top: 30px;
+    color: $color-darken;
+  }
+}
