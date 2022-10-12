@@ -5,19 +5,19 @@
   margin-bottom: 20px;
   margin-top: 20px;
   border-radius: 10px;
-}
 
-.c-alert_success {
-  border-color: $color-success;
-  background-color: rgba($color-success, 20%);
-}
+  &_success {
+    border-color: $color-success;
+    background-color: rgba($color-success, 20%);
+  }
 
-.c-alert_error {
-  border-color: $color-error;
-  background-color: rgba($color-error, 20%);
-}
+  &_error {
+    border-color: $color-error;
+    background-color: rgba($color-error, 20%);
+  }
 
-.c-alert_warning {
-  border-color: $color-warning;
-  background-color: rgba($color-warning, 20%);
+  &_warning {
+    border-color: $color-warning;
+    background-color: rgba($color-warning, 20%);
+  }
 }
