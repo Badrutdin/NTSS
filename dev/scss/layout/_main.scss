@@ -143,62 +143,128 @@ body {
   }
 }
 
-.c-cart-specifications-total{
+.c-cart-specifications-total {
   padding: 30px;
   background-color: $color-lighten;
-  &__btn{
+
+  &__btn {
     width: 280px;
     max-width: 100%;
   }
-  &__prop{
+
+  &__prop {
     font-size: 14px;
     line-height: 22px;
     color: $color-darkest;
   }
-  &__list{
+
+  &__list {
     margin-bottom: -10px;
   }
-  &__item{
+
+  &__item {
     padding-bottom: 10px;
   }
 }
 
-.c-shopping-cart{
-  &__list{
+.c-shopping-cart {
+  &__list {
     border: 1px solid $color-lighten;
 
 
   }
-  &__footer{
+
+  &__footer {
     margin-top: 30px;
   }
 }
 
-.characters-table{
+.characters-table {
   width: 100%;
-  &__row{
-    &:nth-child(odd){
+
+  &__row {
+    max-width: 100%;
+
+    &:nth-child(odd) {
       background-color: #F7F7FF;
     }
-    &:hover,&:focus{
+
+    &:hover, &:focus {
       background-color: $color-primary;
       color: $color-lightest;
       font-weight: 500;
     }
+
     padding: 13px 20px;
     border-radius: 6px;
     color: $color-darken;
     font-size: 14px;
     line-height: 1.4;
   }
-  &__item{
+
+  &__item {
 
   }
 }
 
-.c-header-detail{
+.c-header-detail {
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: #21458C;
+}
+
+.c-project-item {
+  width: 320px;
+  height: 296px;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  text-decoration: none;
+  background-position: center;
+  background-size: (100%);
+  transition: background-size .5s ease-out;
+}
+
+.c-project-item:hover, .c-project-item:focus {
+  background-size: (110%);
+
+}
+
+.c-project-item__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(0deg, #21458C -20%, rgba(30, 70, 160, 0) 40%);
+}
+
+.c-project-item__title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fff;
+  position: relative;
+}
+
+.c-stock{
+  &_stock{
+    color: #219653;
+  }
+  &_not-stock{
+    color: red;
+  }
+  &:before{
+    content: '';
+    display: inline-block;
+    background-color: currentColor;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+  }
 }

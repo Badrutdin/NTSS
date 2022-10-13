@@ -4,6 +4,52 @@ append content
         .row
             .col-10
                 .c-section.c-section_md
+                    +c-product-list__item()
+                .c-section.c-section_md
+                    .c-section__header.c-header-detail Описание
+                    | Телекоммуникационный напольный шкаф NTSS серии «Премиум» предназначен для размещения оборудования систем передачи данных, электротехнического и иного оборудования, крепление которого соответствует требованиям ГОСТ 28601.2–90 (МЭК 60297).
+                    | Конструктивные характеристики
+                    br
+                    br
+                    | Схема телекоммуникационныйнапольный шкаф NTSS серии «Премиум»
+                    | Изделие состоит из двух сварных несущих рам (поз. 3), соединительных горизонтальных направляющих(поз. 7), нижней (поз. 2) и верхней (поз. 1) панелей, боковых стенок (поз. 6) и передней (поз. 4) и задней (поз. 5) дверей.
+                    | Монтажные профили 19" (поз. 8) крепятся попарно спереди и сзади шкафа на горизонтальные направляющие (поз. 7).
+                    | Шкаф опирается на регулируемые ножки (поз. 9, поставляются в комплекте) или транспортировочные ролики (заказываются отдельно).
+                    | Рамы скрепляются горизонтальными направляющими с помощью резьбовых соединений.
+                    | Крыша и нижняя панели крепятся к силовым рамам с помощью поставляемого в комплекте крепежа.
+                    br
+                    br
+                    | На схеме (Рис.1) обозначены:
+                    br
+                    | - Крыша (верхняя панель);
+                    br
+                    | - Дно (нижняя панель);
+                    br
+                    | - Сварная рама;
+                    br
+                    | - Передняя дверь;
+                    br
+                    | - Задняя дверь;
+                    br
+                    | - Боковая панель;
+                    br
+                    | - Горизонтальная направляющая;
+                    br
+                    | - Монтажный профиль 19”;
+                    br
+                    | - Опора регулируемая;
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    | В крыше и дне шкафа выполнены отверстия для установки кабельных вводов.
+                    | Шкаф предусматривает установку потолочных вентиляторных панелей, обеспечивающих отток нагретого воздуха из внутреннего пространства шкафа.
+                    | Вентиляторные панели крепятся на поперечины силовых сварных рам.
+                    | Есть возможность установки вентиляторных модулей непосредственно в крышу.
+                .c-section.c-section_md
                     .c-section__header.c-header-detail Характеристики
                     table.characters-table
                         +characters-table__row-1({name: 'Высота', value: '22U'})
@@ -21,49 +67,81 @@ append content
                         +characters-table__row-2({num: '1', name: 'Винт с прессшайбой М6х10(12) (Zn)', value: '12'})
                         +characters-table__row-2({num: '2', name: 'Винт с прессшайбой М6х16 (Zn)', value: '26'})
                         +characters-table__row-2({num: '3', name: 'Гайка с фланцем М6 (Zn)', value: '12'})
-                        +characters-table__row-2({num: '4',name: 'Винт потай головка под шестигранник М6х14 (Чёрный)',value: '18'})
+                        +characters-table__row-2({
+                            num: '4',
+                            name: 'Винт потай головка под шестигранник М6х14 (Чёрный)',
+                            value: '18'
+                        })
                         +characters-table__row-2({num: '5', name: 'Комплект кабелей заземления', value: '4'})
-                        +characters-table__row-2({num: '6',name: 'Комплект крепежа вертикальных направляющих и органайзеров',value: '18'})
+                        +characters-table__row-2({
+                            num: '6',
+                            name: 'Комплект крепежа вертикальных направляющих и органайзеров',
+                            value: '18'
+                        })
                 .c-section.c-section_md.c-files-section.c-files-section_cols-1
                     .c-section__header.c-header-detail Технический паспорт
                     .row.c-files-list
-                            .c-files-list__item.col-12
-                                +c-files-list__item({href:'images/about-main-page.jpg',icon:'images/svg.svg#pdf', value:'ПАСПОРТ НАПОЛЬНЫЙ СЕРВЕРНЫЙ ШКАФ NTSS СЕРИИ ПРОЦОД',size:'1.3 Mb'})
-                            .c-files-list__item.col-12
-                                +c-files-list__item({href:'images/about-main-page.jpg',icon:'images/svg.svg#pdf', value:'ПАСПОРТ НАПОЛЬНЫЙ СЕРВЕРНЫЙ ШКАФ NTSS СЕРИИ ПРОЦОД',size:'1.3 Mb'})
+                        .c-files-list__item.col-12
+                            +c-files-list__item({
+                                href: 'images/about-main-page.jpg',
+                                icon: 'images/svg.svg#pdf',
+                                value: 'ПАСПОРТ НАПОЛЬНЫЙ СЕРВЕРНЫЙ ШКАФ NTSS СЕРИИ ПРОЦОД',
+                                size: '1.3 Mb'
+                            })
+                        .c-files-list__item.col-12
+                            +c-files-list__item({
+                                href: 'images/about-main-page.jpg',
+                                icon: 'images/svg.svg#pdf',
+                                value: 'ПАСПОРТ НАПОЛЬНЫЙ СЕРВЕРНЫЙ ШКАФ NTSS СЕРИИ ПРОЦОД',
+                                size: '1.3 Mb'
+                            })
                 .c-section.c-section_md.c-files-section.c-files-section_cols-1
                     .c-section__header.c-header-detail Сертификаты
                     .row.c-files-list
-                            .c-files-list__item.col-12
-                                a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
-                            .c-files-list__item.col-12
-                                a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
-                            .c-files-list__item.col-12
-                                a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
+                        .c-files-list__item.col-12
+                            a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
+                        .c-files-list__item.col-12
+                            a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
+                        .c-files-list__item.col-12
+                            a.c-doc-item.c-doc-item_row Информационное письмо на телекоммуникационные шкафы.
                 .c-section.c-section_md
                     .c-section__header.c-header-detail Видео
                     .row
-                            .col-3
-                                .iframe-video.ratio.ratio-16x9(data-video-frame='')
-                                    img.iframe-preload(data-url='https://www.youtube.com/embed/AWKzr6n0ea0?autoplay=1' src='https://cdnn21.img.ria.ru/images/144814/13/1448141397_0:219:4256:2613_600x0_80_0_0_daca8ef930216c2914360b4561ec4c30.jpg')
-                                    .iframe-play(aria-label='Смотреть')
-                                        svg(height='100%' version='1.1' viewbox='0 0 68 48' width='100%')
-                                            path.iframe-play__button-bg(d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z' fill='#f00')
-                                            path(d='M 45,24 27,14 27,34' fill='#fff')
+                        .col-3
+                            .iframe-video.ratio.ratio-16x9(data-video-frame='')
+                                img.iframe-preload(data-url='https://www.youtube.com/embed/AWKzr6n0ea0?autoplay=1' src='https://cdnn21.img.ria.ru/images/144814/13/1448141397_0:219:4256:2613_600x0_80_0_0_daca8ef930216c2914360b4561ec4c30.jpg')
+                                .iframe-play(aria-label='Смотреть')
+                                    svg(height='100%' version='1.1' viewbox='0 0 68 48' width='100%')
+                                        path.iframe-play__button-bg(d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z' fill='#f00')
+                                        path(d='M 45,24 27,14 27,34' fill='#fff')
 
-                            .col-3
-                                .iframe-video.ratio.ratio-16x9(data-video-frame='')
-                                    img.iframe-preload(data-url='https://www.youtube.com/embed/AWKzr6n0ea0?autoplay=1' src='https://cdnn21.img.ria.ru/images/144814/13/1448141397_0:219:4256:2613_600x0_80_0_0_daca8ef930216c2914360b4561ec4c30.jpg')
-                                    .iframe-play(aria-label='Смотреть')
-                                        svg(height='100%' version='1.1' viewbox='0 0 68 48' width='100%')
-                                            path.iframe-play__button-bg(d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z' fill='#f00')
-                                            path(d='M 45,24 27,14 27,34' fill='#fff')
+                        .col-3
+                            .iframe-video.ratio.ratio-16x9(data-video-frame='')
+                                img.iframe-preload(data-url='https://www.youtube.com/embed/AWKzr6n0ea0?autoplay=1' src='https://cdnn21.img.ria.ru/images/144814/13/1448141397_0:219:4256:2613_600x0_80_0_0_daca8ef930216c2914360b4561ec4c30.jpg')
+                                .iframe-play(aria-label='Смотреть')
+                                    svg(height='100%' version='1.1' viewbox='0 0 68 48' width='100%')
+                                        path.iframe-play__button-bg(d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z' fill='#f00')
+                                        path(d='M 45,24 27,14 27,34' fill='#fff')
 
                 .c-section.c-section_md
+                    .c-section__header.c-header-detail Проекты
+                    .row
+                        .col-auto
+                            a.c-project-item(style="background-image:url(images/project.jpg)", href="#")
+                                .c-project-item__layer
+                                .c-project-item__title Серверное решение ПРОЦОД для Ростелекома
+                        .col-auto
+                            a.c-project-item(style="background-image:url(images/project.jpg)", href="#")
+                                .c-project-item__layer
+                                .c-project-item__title Серверное решение ПРОЦОД для Ростелекома
+                        .col-auto
+                            a.c-project-item(style="background-image:url(images/project.jpg)", href="#")
+                                .c-project-item__layer
+                                .c-project-item__title Серверное решение ПРОЦОД для Ростелекома
                     .c-specifications-section__header
                         .row.align-items-center.justify-content-between
                             .col-auto
-                                h2.c-specifications-section__title Сопутствующие товары
+                                h2.c-specifications-section__title Недавно просмотренные
                             .col-auto
                                 a.c-btn.c-btn_sm.c-btn_style-underline.c-btn_color-primary.c-btn_color-primary.w-auto(href='#') Смотреть все
                     .owl-carousel.c-slider.c-slider_h-100.c-products-slider(data-products-slider='2')
@@ -75,6 +153,13 @@ append content
                         +c-slider-item()
                         +c-slider-item()
             .col-2
+                .row.c-poduct-list
+                    +c-product-item()
+                    +c-product-item()
+                    +c-product-item()
+                    +c-product-item()
+                    +c-product-item()
+                    +c-product-item()
 
 
 mixin characters-table__row-1(values)
@@ -114,3 +199,69 @@ mixin c-slider-item()
                         .c-product-price
                             span.c-product-price__item 14 990 ₽
                             span.c-product-price__item.c-product-price__old 19 990 ₽
+mixin c-product-item()
+    .col-12.c-product-list__item
+        .c-product-card.c-product-card_md.c-product-card_events(data-id='123')
+            .c-product-card__actions.c-icon-list
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='18' width='18' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#comparisons' xmlns='http://www.w3.org/1999/xlink')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='20' width='22' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#favorite' xmlns='http://www.w3.org/1999/xlink')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='16' width='22' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#eye' xmlns='http://www.w3.org/1999/xlink')
+            a.c-product-card__preview(href='#')
+                img(alt='' src='images/cupboard.png')
+            .c-product-card__description
+                .c-product-desc
+                    a.c-product-desc__text.c-product-desc__item(href='#') Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу Описание по запросу
+                    .c-product-desc__price.c-product-desc__item
+                        .c-product-price
+                            span.c-product-price__item 14 990 ₽
+                            span.c-product-price__item.c-product-price__old 19 990 ₽
+
+
+
+mixin c-product-list__item()
+    .c-product-list__item
+        .c-product-card.c-product-card_lg.c-product-card_card-detail.c-product-card_events
+            .c-product-card__actions.c-icon-list
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='18' width='18' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#comparisons' xmlns='http://www.w3.org/1999/xlink')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='20' width='22' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#favorite' xmlns='http://www.w3.org/1999/xlink')
+                .c-icon-list__item
+                    button.c-btn.c-btn_product-action(type='button')
+                        svg(fill='none' height='16' width='22' xmlns='http://www.w3.org/2000/svg')
+                            use(xlink:href='images/svg.svg#eye' xmlns='http://www.w3.org/1999/xlink')
+            a.c-product-card__preview(href='#')
+                img.c-product-card__preview-img(alt='' src='images/cupboard.png')
+            .c-product-card__body
+                .c-product-card__description
+                    .c-product-desc
+                        a.c-product-desc__text.c-product-desc__item(href='#')  19" Напольный серверный шкаф NTSS ПРОЦОД МАСТЕР 47U 800х1200 мм сварной в сборе, двери передняя перфорированная, задние двойные перфорированные, боковые стенки, регулируемые опоры, ролики, RAL 9005
+                        .c-product-desc__articul.c-product-desc__item  NTSS-PCM47U80120PD/PDD-BL
+                        .c-stock.c-stock_stock.c-product-desc__item  В наличии
+                        .c-product-desc__price.c-product-desc__item
+                            .c-product-price
+                                span.c-product-price__item 104 990 ₽
+                                span.c-product-price__item.c-product-price__old 19 990 ₽
+                .c-product-card__controls
+                    .c-product-controls.c-product-controls_lg
+                        .c-product-controls__body
+                            .c-product-controls__counter.c-input-counter
+                                input.c-input-counter__input.c-input.c-input_md.c-input_style-secondary.c-input_color-primary(type='text' value='1')
+                                button.c-input-counter__left-ctrl(type='button') -
+                                button.c-input-counter__right-ctrl(type='button') +
+                            a.c-product-controls__basket.c-btn.c-btn_style-default.c-btn_color-primary.c-btn_sm(data-basket-btn='' href='#popup-form') В корзину
+                        .c-product-controls__footer
+                            button.c-product-controls__buy.c-btn.c-btn_style-default.c-btn_color-light.c-btn_sm(href='#' type='button') Купить в один клик
